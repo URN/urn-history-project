@@ -1,0 +1,88 @@
+---
+layout: default
+title: Home
+body_class: home
+no_report_links: true
+permalink: /
+search: false
+---
+
+<section class="home-section home-shows wrapper">
+  <div class="home-shows-design-element">
+
+    <a href="/years/">
+      <img src="/images/home-image.jpg" class="home-image" alt="An array of NNT posters" />
+    </a>
+
+  </div>
+
+  <div class="home-info">
+
+    <p>Discovering the history of our station. So we we've logged records for </p>
+
+
+    {% assign shows = site.shows %}
+    {% assign people = site.people %}
+
+    <div class="flex-row home-shows-counter-container">
+      <div class="flex-1">
+        <div class="home-shows-counter js-lettering">{{shows.size}}</div>
+        <p>shows</p>
+      </div>
+      <div class="flex-1">
+        <div class="home-shows-counter js-lettering">{{people.size}}</div>
+        <p>people</p>
+      </div>
+    </div>
+
+    <p class="home-button">
+      <a href="/years/">Explore the archives&hellip;</a>
+    </p>
+
+  </div>
+
+</section>
+
+<section class="home-section home-network">
+
+ <div class="home-info">
+  <h2>Alumni Network</h2>
+
+  <p>We've still in the early stages of this project, soon we hope to start reaching out to our alumni members and form a network of previous members. </p>
+
+  <!-- <p>The alumni network is a great way to stay in touch with friends you made while at the theatre and to keep up with the current goings on at NNT</p>
+
+  <p>For more information see the <a href="http://urn1350.net/alumni/">alumni network page</a> on the NNT website.</p> -->
+
+ </div>
+
+</section>
+
+<section class="home-section home-contribute">
+ <div class="home-info">
+  <h2>Tell Your Story</h2>
+  {% assign people = site.people %}
+
+  <p>We're still a long way off collecting details on every show and every alumnus!</p>
+
+  <div class="home-contribute-actions">
+    <div class="home-contribute-action">
+      <a href="/people/">
+        <i class="ion-ios-person"></i>
+        <h3>Find yourself</h3>
+        <p>And send in your memories</p>
+      </a>
+    </div>
+    <div class="home-contribute-action">
+      <a href="/search/">
+        <i class="fa fa-ticket"></i>
+        <h3>Find your shows</h3>
+        <p>If we're missing details, let us know</p>
+      </a>
+    </div>
+  </div>
+
+  <p>If you have something else to give, see the <a href="/contributing/">contributing page</a>.</p>
+
+ </div>
+</section>

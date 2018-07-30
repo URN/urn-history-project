@@ -1,0 +1,59 @@
+---
+layout: default
+body_class: section-archives layout-year
+current: archives
+---
+
+<div class="breadcrumbs">
+  <div class="breadcrumb-inner">
+
+    <div class="breadcrumb-controls">
+      <a {% if page.next %}href="{{ page.next.url }}" class="enabled"{% else %}href="/years/" class="disabled"{% endif %} title="Next Year"><i class="ion-chevron-left"></i></a>
+      <a {% if page.previous %}href="{{ page.previous.url }}" class="enabled"{% else %}href="/years/" class="disabled"{% endif %} title="Previous Year">
+        <i class="ion-chevron-right"></i>
+      </a>
+    </div>
+
+    <ul class="breadcrumb-list">
+      <li class="breadcrumb">
+        <a href="/years/">Archives</a>
+      </li>
+      <li class="breadcrumb breadcrumb-{{ page.decade }}">
+        <a href="{{ page.url }}">{{ page.title }}</a>
+      </li>
+    </ul>
+
+  </div>
+</div>
+
+<div class="grid-wrap grid-row debug" data-debug-toggle>
+  {% include def-data.html def=site.data.defs.year model='year' %}
+</div>
+
+<div class="page">
+  <div class="year-shows">
+    {% include year_list.html %}
+  </div>
+  <div class="year-aside">
+    {% if page.committee %}
+
+      {% if page.committee.committee.size < site.committee_low_members %}
+        {% include boxes/committee_short.html %}
+      {% endif %}
+
+      {% include person_list.html people=page.committee.committee enable_role_icons=true %}
+
+    {% else %}
+
+      {% include boxes/committee_missing.html %}
+
+    {% endif %}
+  </div>
+</div>
+
+<script type="text/javascript">
+// Reversed to make sense with direction
+var jekyll_page_up = "/years/";
+var jekyll_page_previous = "{{ page.next.url }}";
+var jekyll_page_next = "{{ page.previous.url }}";
+</script>

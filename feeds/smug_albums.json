@@ -1,0 +1,19 @@
+---
+# Lists all SM albums in use for prod shots, used to test usage of albums
+---
+{
+  {% assign first_actual = true %}
+
+{% for show in site.shows %}
+{% if show.prod_shots %}
+{% unless first_actual %},{% endunless %}
+  {% assign first_actual = false %}
+  {{ show.prod_shots | jsonify }}: {
+    "title": {{ show.title | jsonify }},
+    "year_title": {{ show.year_page.title | jsonify }},
+    "link": {{ show.url | jsonify }}
+  }
+{% endif %}
+{% endfor %}
+
+}

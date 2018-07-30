@@ -1,0 +1,24 @@
+.jekyll-metadata
+.sass-cache/
+.vagrant/
+_asset_bundler_cache/
+_site/
+_smugmug_cache/
+lib/
+node_modules/
+tmp/
+.htmltest/*
+_bin/htmltest
+.htmltest.*
+.bundle/
+vendor/
+
+for_shows_uncompressed
+for_shows_process
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+*.lnk

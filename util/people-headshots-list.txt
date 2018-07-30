@@ -1,0 +1,10 @@
+---
+layout: null
+---
+Collect headshots from people, collection form doesn't support uploads so we need people to email them in or say yes to one we've found. This issue should never close.
+
+*This list is automatically generated from http://history.urn1350.net/util/people-headshots-list.txt, last updated {{site.time | date: "%Y-%m-%d %H:%M" }}.*
+
+{% assign sorted_people = site.people | sort: "title" %}
+{% for person in sorted_people %}{% if person.submitted %}
+{% if person.headshot %}- [x] [{{ person.title }}]({{ site.url }}{{ person.url }}){% else %}- [ ] [{{ person.title }}]({{ site.url }}{{ person.url }}){% endif %}{% endif %}{% endfor %}

@@ -1,0 +1,59 @@
+// Show list on /year/YY_YY pages
+
+.show-list
+  @include list-unformatted
+
+  .show-list-single
+    $poster-width: 33px
+    $padding: 10px
+
+    position: relative
+    margin-bottom: $baseline / 2
+
+    a
+      font-weight: 400
+      display: block
+      overflow: auto
+      color: $color-text-white
+      padding: $padding $padding $padding ($poster-width + $padding + 6px)
+
+      @include no-underline(false)
+      &:hover
+        background: $color-link-bg-hover
+        .show-list-title
+          text-decoration: underline
+
+    .show-list-poster
+      // Poster container
+      position: absolute
+      left: $padding
+      width: $poster-width
+      height: 44px
+      overflow: hidden
+
+      background: $color-empty-poster
+
+      img
+        // IMG poster
+        width: 100%
+
+    .show-list-title
+      color: $color-link
+      font-weight: $font-weight-bold
+
+    .show-list-show_type, .show-list-date
+      display: inline-block
+      font-size: 14px
+      color: $color-grey
+
+    .show-list-show_type
+      min-width: 63px // Lines the dates up for easy scanning
+      padding-right: 6px
+      @include show-show_type-circle
+
+    .show-list-date
+
+
+.show-student-written
+  color: $color-grey
+

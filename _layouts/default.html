@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+  <!--
+      _   _ ______ _  _ ____
+     / | / /_  __/ / / / __ \
+    /  |/ / / / / /_/ / /_/ /
+   / /|  / / / / __  / ____/
+  /_/ |_/ /_/ /_/ /_/_/
+
+  -->
+  {% assign shows = site.shows %}
+  {% assign committees = site.committees %}
+  {% include head.html %}
+
+  <body class="{{ layout.body_class }} {{ page.body_class }}">
+    <!-- Debug LHS -->
+    <div class="debug-build-details" data-debug-toggle>
+      <i class="fa fa-clock-o"></i>
+      SEC {{ page.current }} | LBC {{ layout.body_class }} | PBC {{ page.body_class }}
+    </div>
+
+    <div class="debug-breakpoint" data-debug-toggle>
+      <span class="mob-port">
+        <i class="ion-iphone"></i>
+        mob-port
+      </span>
+      <span class="mob-land">
+        <i class="ion-iphone"></i>
+        mob-land
+      </span>
+      <span class="tab-port">
+        <i class="ion-ipad"></i>
+        tab-port
+      </span>
+      <span class="tab-land">
+        <i class="ion-ipad"></i>
+        tab-land
+      </span>
+      <span class="med-desk">
+        <i class="ion-monitor"></i>
+        med-desk
+      </span>
+      <span class="widescreen">
+        <i class="ion-ios-monitor-outline"></i>
+        widescreen
+      </span>
+    </div>
+
+    <!-- Debug RHS -->
+    <div class="debug-mode" data-debug-toggle>
+      <i class="fa fa-bug"></i> Site is in editors mode, type editor again to cancel
+    </div>
+
+    <div class="debug-links" data-debug-toggle>
+      <a href="https://github.com/urn/urn-history-project/">GH Repo</a> | <a href="https://github.com/urn/urn-history-project/issues/">Issues</a> | <a href="https://github.com/urn/urn-history-project/issues/new?body={{page.url}}" data-proofer-ignore>New Issue</a>
+    </div>
+
+    {% include header.html %}
+
+    <div class="site-content" role="main">
+        {{ content }}
+    </div>
+
+    <div id="lightbox-blur"></div>
+
+    {% include footer.html %}
+
+    {% include report.html %}
+
+    {{ page.js }}
+
+    <!-- {% include ga.html %} -->
+
+    <div id="nthpMobileDetect"></div>
+
+  </body>
+
+</html>

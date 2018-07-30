@@ -1,0 +1,53 @@
+<dl class="link-list">
+{% for link in include.links %}
+
+  <dt class="single-line link--{{ link.type | downcase }}">
+  	{% if link.icon %}
+		<i class="fa fa-fw {{ link.icon }}"></i>
+	{% endif %}
+
+	{% if link.stars %}
+		<span class="stars" title="{{ link.rating }} → {{ link.stars | join ',' }}">
+			{% for star in (1..link.stars[0]) %}
+				<i class="fa fa-star {% increment star %}"></i>
+			{% endfor %}
+			{% if link.stars[1] == 0.5 %}
+				<i class="fa fa-star-half-o"></i>
+			{% endif %}
+			{% for nostar in (1..link.stars[2]) %}
+				<i class="fa fa-star-o {% increment nostar %}"></i>
+			{% endfor %}
+		</span>
+	{% endif %}
+
+	{% if link.quote %}
+		<q class="quote">{{ link.quote }}</q>
+
+    {% if link.publisher %}
+        <cite class="publisher">
+            <a href="{{ link.href }}" {{ link.data }} {% if link.note %}title="{{ link.note }}"{% endif %}>{{ link.publisher }}</a>
+        </cite>
+    {% else %}
+        <a href="{{ link.href }}" {{ link.data }} {% if link.note %}title="{{ link.note }}"{% endif %}>{{ link.title }}</a>
+    {% endif %}
+
+  {% else %}
+    <a href="{{ link.href }}" {{ link.data }} {% if link.note %}title="{{ link.note }}"{% endif %}>{{ link.title }}</a>
+
+    {% if link.publisher %}
+        <cite class="publisher">
+            {{ link.publisher }}
+        </cite>
+    {% endif %}
+
+  {% endif %}
+
+	<span class="debug debug-hidden-content" data-debug-toggle>
+		{{ link.comment }}
+	</span>
+  </dt>
+
+  <dd class="hidden">{{ link.href }}</dd>
+
+{% endfor %}
+</dl>

@@ -1,0 +1,160 @@
+// /years Archive section
+
+// Lists
+
+@mixin archive-section-background($color)
+  background: $color
+  @include text-shadow-effect(mix(black, $color, 20%))
+
+
+.archive-section
+  h3
+    @include archive-section-background(#1F1F1F)
+    margin-bottom: $baseline / 2
+    padding: $baseline
+
+.archive-section-content
+  padding-left: $baseline / 2
+  padding-right: $baseline / 2
+
+.archive-list
+  // Two columns with a minimum width of 7rem
+  columns: 2 7rem
+
+  @include list-unformatted
+  li
+    margin-bottom: 2px
+    position: relative
+  .empty a
+    color: $color-grey-dark
+  .minor a
+    color: $color-grey
+
+  a
+    @include no-underline(true)
+    @include respond-down(tab-port)
+      // Improve touch target size
+      display: block
+      padding: $baseline / 2
+      background: lighten($color-background, 3%)
+      // Make focus less spaz
+
+.archive-list--single
+  columns: 1
+
+.decade-list
+  @include respond-up(tab-land)
+    // Slightly different when made bigger
+    column-width: 5rem
+  li
+    text-align: center
+
+.archive-list-counts
+  // Debug feature
+  @include debug-box
+  position: absolute
+  right: 0
+  top: 2px
+
+// Colour generator for decade, overrides some stuff in _breadcrumbs.sass
+$background-base: adjust-hue($color-decades-base, 220%)
+$background-items: -3
+
+@for $i from 194 through 201
+  $shift: (100% / $background-items) * (201-$i)
+  $shift-color: adjust-hue($background-base, $shift)
+
+  .decade-#{$i} h3
+    @include archive-section-background($shift-color)
+
+  @include breadcrumb-color($i, $shift-color)
+
+  .decade-background-#{$i}
+    background: $shift-color !important
+
+// Specifics for /years page
+
+.archives
+  .decades, .others
+    // Row element
+    display: flex
+    flex-wrap: wrap
+
+  .archive-section
+    // Row item
+    flex-basis: 100%
+    @include respond-up(tab-port)
+      flex-basis: 33.333%
+    @include respond-up(tab-land)
+      flex-basis: 25%
+    @include block
+
+    @include set-property-to-gutter(padding-right)
+
+  $bottom-group-border-thick: 4px
+
+  .venues, .show_types, .plays
+    h3
+      padding-bottom: $baseline - $bottom-group-border-thick
+      border-bottom: $bottom-group-border-thick solid
+
+  .venues
+    // Wider row item
+    flex-basis: 100%
+    @include respond-up(tab-port)
+      flex-basis: 33.333%
+    @include respond-up(tab-land)
+      flex-basis: 50%
+
+    h3
+      border-bottom-color: $color-venues
+
+  .venue-listing
+    display: flex
+    flex-wrap: wrap
+
+  .venue-listing__place_type
+    @include block
+    width: 100%
+    @include respond-up(tab-port)
+      width: 100%
+    @include respond-up(tab-land)
+      width: 100% * 1/3
+      @include set-property-to-gutter(padding-right)
+
+    &:last-child
+      padding-right: 0
+
+  .venue-listing__place_type--studios
+    @include respond-up(tab-land)
+      width: 100% * 2/3
+
+  .venue-listing__place_type-title
+    font-size: 1.1rem
+    margin-bottom: 0.25rem
+
+  .show_types
+    h3
+      border-bottom-color: $color-show_types
+
+  .plays
+    h3
+      border-bottom-color: $color-playwright
+
+  .show_type-list
+    // As with .decade-list this depends on the padding. We give more for
+    // smaller screens assuming they're touch.
+    column-width: 8.5rem
+    @include respond-up(tab-land)
+      column-width: 5rem
+
+    li
+      white-space: nowrap
+
+  .play-list
+    columns: 1
+
+  // @include respond-to(tab-port)
+  //   .show_type-list, .venue-list
+  //     // Not quite enough room in this size
+  //     columns: 1

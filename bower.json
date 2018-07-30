@@ -1,0 +1,41 @@
+{
+  "name": "history-project",
+  "version": "0.0.0",
+  "homepage": "https://github.com/urn/urn-history-project",
+  "authors": [
+    "Will Pimblett <will@fullaf.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "lib/",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bourbon": "~4.3.3",
+    "fgrid": "*",
+    "font-awesome": "~4.7.0",
+    "ionicons": "~2.0.1",
+    "mousetrap": "~1.6.0",
+    "github-issues-widget": "https://github.com/chrismear/github-issues-widget.git",
+    "report-issue-post": "https://github.com/wjdp/report-issue-post.git",
+    "underscore": "~1.8.3",
+    "jquery": "~3.2.1",
+    "octicons": "https://github.com/wjdp/octicons.git#91e1adcd80bbb314f899e65971b39fac94489b4f",
+    "lunr.js": "~0.7.0",
+    "letteringjs": "~0.7.0",
+    "montserrat-webfont": "~1.0.3",
+    "open-sans-fontface": "~1.4.2",
+    "turbolinks": "https://github.com/turbolinks/turbolinks.git",
+    "tablesorter": "jquery.tablesorter#^2.26.6",
+    "picturefill": "^3.0.2",
+    "moment": "^2.15.1",
+    "raven-js": "^3.0.5"
+  },
+  "resolutions": {
+    "bourbon": "~4.3.3"
+  }
+}

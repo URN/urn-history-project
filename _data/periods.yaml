@@ -1,0 +1,14 @@
+---
+# This file defines the show_type periods, and their order, that are accepted as the period attribute for shows
+
+- period: Autumn
+  title: Autumn
+  description: Shows taking place in the autumn semester
+
+- period: Spring
+  title: Spring
+  description: Shows taking place in the spring semester
+
+- period: Year Long
+  title: Year Long
+  description: Shows taking place all year long

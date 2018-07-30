@@ -1,0 +1,47 @@
+<head>
+  <!-- Meta -->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% if page.title and page.body_class != 'home' %}{{ page.title | escape_once }} &middot; {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
+  <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 156 | escape_once }}{% else %}{{ site.description }}{% endif %}">
+
+  <!-- CDN Provided Fonts -->
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,400italic,600|Montserrat:400,700' rel='stylesheet' type='text/css'>
+
+  <!-- Local Styles -->
+  <link rel="stylesheet" href="{% static /css/main.css %}" data-turbolinks-track="reload">
+  <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}" data-proofer-ignore>
+
+  <!-- humans.txt -->
+  <link rel="author" href="/humans.txt" />
+
+  <!-- Icons -->
+
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="{% static /images/browser/apple-touch-icon.png %}">
+  <link rel="icon" type="image/png" sizes="32x32" href="{% static /images/browser/favicon-32x32.png %}">
+  <link rel="icon" type="image/png" sizes="16x16" href="{% static /images/browser/favicon-16x16.png %}">
+  <link rel="manifest" href="{% static /images/browser/site.webmanifest %}">
+  <link rel="mask-icon" href="{% static /images/browser/safari-pinned-tab.svg %}" content="{{ site.color_urn_purple }}">
+  <link rel="shortcut icon" href="{% static /images/browser/favicon.ico %}">
+  <meta name="apple-mobile-web-app-title" content="History Project">
+  <meta name="application-name" content="History Project">
+  <meta name="msapplication-TileColor" content="{{ site.color_urn_purple }}">
+  <meta name="msapplication-config" content="{% static /images/browser/browserconfig.xml %}">
+  <meta name="theme-color" content="{{ site.color_urn_purple }}">
+
+  <!-- Opengraph -->
+  {% unless site.skip_opengraph %}{% include opengraph.html %}{% endunless %}
+
+  <!-- Scripts -->
+  <script defer type="text/javascript" src="{% static /js/lib.js %}" data-turbolinks-track="reload"></script>
+  <script defer type="text/javascript" src="/js/raven.js"></script>
+  <script defer type="text/javascript" src="/js/focus-ring.js"></script>
+  <script defer type="text/javascript" src="{% static /js/app.js %}" data-turbolinks-track="reload"></script>
+
+  {% for head_extra_line in layout.head_extra %}
+    {{ head_extra_line }}
+  {% endfor %}
+</head>

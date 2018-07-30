@@ -1,0 +1,172 @@
+// This file started life handling the report button and it's modal. The edit and history buttons then grew out of the report button and also live here.
+
+@mixin tab($bg)
+  background: $bg
+  @include text-shadow-effect($bg)
+  z-index: $zindex-report-tab
+
+$report-top: 245px
+$report-spacing: 65px
+$report-color-step: -60%
+
+.side-tab
+  display: none //Just out get rid of the side bar to disable contributions 
+  position: fixed
+  right: -195px
+
+  opacity: 0.6
+  color: $color-text-white
+
+  @include respond-down(mob-land)
+    display: none
+
+  a
+    padding: $baseline / 2 $baseline
+    display: block
+    color: $color-text-white
+
+    @include no-underline
+
+  i, p
+    line-height: $baseline
+
+  i
+    float: left
+    font-size: $base-font-size * 2
+    padding-right: $baseline
+
+  .ion-chatbox-working
+    position: relative
+    top: -2px
+
+  .octicon-history
+    position: relative
+    top: 1px
+
+  p
+    font-size: $base-font-size
+    font-weight: $font-weight-bold
+    min-width: 220px
+
+
+  transition: all ease-out 0.25s
+
+  &:hover, &:focus
+    right: 0px
+    opacity: 1
+    cursor: hand
+
+.report-tab
+  top: $report-top
+  @include tab($color-urn-purple)
+
+.edit-tab
+  top: $report-top + $report-spacing
+  @include tab(adjust-hue($color-urn-purple, $report-color-step))
+
+.history-tab
+  top: $report-top + $report-spacing * 2
+  @include tab(adjust-hue($color-urn-purple, $report-color-step*2))
+
+.blame-tab
+  top: $report-top + $report-spacing * 3
+  @include tab(adjust-hue($color-urn-purple, $report-color-step*3))
+
+.report
+  display: none
+  &.report-show
+    display: block
+
+.report-bg
+  @extend .modal-bg
+
+.report-modal
+  z-index: $zindex-modal
+  $width: 660px
+  position: fixed
+
+  background: $color-text-white
+  color: $color-text-black
+
+  padding: $baseline
+
+  // Mobile styling, fill whole screen and be scrollable
+  top: 0px
+  left: 0px
+  width: 100%
+  height: 100%
+  overflow-y: auto
+
+  @include respond-up(tab-port)
+    // Desktop version, be a modal dialogue
+    width: $width
+    height: auto // reset
+    margin-left: -$width / 2
+    margin-right: -$width / 2
+
+    top: 50px
+    left: 50%
+
+  a
+    color: lighten($color-info, 20%)
+
+.report-close
+  position: absolute
+  top: 0px
+  right: 0px
+  width: 32px
+  height: 32px
+  background: $color-error
+  color: $color-text-white
+  padding-left: 10px
+  font-size: 21px
+  border-radius: 0 0 0 4px
+  opacity: 0.9
+
+  &:hover
+    background: lighten($color-error, 5%)
+
+.report-text
+  @extend .input-text
+
+.report-textarea
+  @extend .input-textarea
+
+.report-submit
+  @extend .input-submit
+
+.improve
+  @extend .report
+
+.improve-bg
+  @extend .report-bg
+
+.improve-modal
+  @extend .report-modal
+
+.improve-modal-content
+  @extend .report-improve-modal-content !optional
+
+.improve-close
+  @extend .report-close
+
+.improve-actions
+  @include grid-row
+
+.improve-action
+  @include grid-x-percent(50%)
+  text-align: center
+
+  a.button
+    color: $color-text-white
+
+    // Fix for button with half margin-bottom
+    margin-bottom: $baseline / 2
+    &:active
+      margin-bottom: ($baseline / 2) + 1
+
+  p
+    font-size: $base-font-size-compact
+
+.button-improve, a.button-improve
+  @include button($color-success)

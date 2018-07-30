@@ -1,0 +1,96 @@
+{% unless page.no_report_links == true %}
+
+{% capture page_path %}{% if page.collection %}{{ page.relative_path }}{% else %}{{ page.path }}{% endif %}{% endcapture %}
+<div id="report-this-page" class="side-tab report-tab">
+  <a href="https://github.com/urn/urn-history-project/issues/new?body={{page.url}}" data-proofer-ignore>
+    <i class="ion-chatbox-working"></i><p class="report-tab-text">Message the Editors</p>
+  </a>
+</div>
+{% unless page.editable == false %}
+{% capture edit_link %}https://github.com/urn/urn-history-project/edit/master/{{ page_path }}{% endcapture %}
+<div id="improve-this-page" class="side-tab edit-tab">
+  <a href="{{ edit_link }}" data-proofer-ignore>
+    <i class="octicon octicon octicon-pencil"></i><p class="report-tab-text">Improve This Page</p>
+  </a>
+</div>
+<div class="side-tab history-tab">
+  <a href="https://github.com/urn/urn-history-project/commits/master/{{ page_path }}" data-proofer-ignore>
+    <i class="octicon octicon octicon-history"></i><p class="report-tab-text">Page History</p>
+  </a>
+</div>
+<div class="side-tab blame-tab">
+  <a href="https://github.com/urn/urn-history-project/blame/master/{{ page_path }}" data-proofer-ignore>
+    <i class="octicon octicon octicon-microscope"></i><p class="report-tab-text">Blame</p>
+  </a>
+</div>
+{% endunless %}
+
+<div id="report" class="report" role="form">
+  <div data-report-close class="report-bg"></div>
+  <div id="report-modal" class="report-modal">
+    <div data-report-close class="report-close"><i class="octicon octicon-x"></i></div>
+    <h3><i class="ion-chatbox-working"></i> Message the editors about this page</h3>
+    <div id="report-modal-content">
+      <p>You can use the form below to post to our public <a href="https://github.com/urn/urn-history-project/issues">
+        issue tracker</a> about the page you're currently on &ndash; <strong>{{ page.title | escape_once }}</strong>. Let us know about
+        missing or incorrect details, typos or any other way this page could be improved.</p>
+      <div class="report-form">
+        <form id="report-issue-form" action="{{ site.ntbot_endpoint }}" method="POST">
+          <input class="report-text" type="text" id="report-title" required placeholder="Subject" />
+          <textarea class="report-textarea" id="report-message" required placeholder="Message"></textarea>
+          <input class="report-text" type="text" id="report-name" required placeholder="Your name and year of graduation" />
+          <input type="hidden" id="report-page_url" value="{{ page.url }}"/>
+          <button class="report-submit" type="submit">Submit</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% unless page.editable == false %}
+<div id="improve" class="improve">
+  <div data-report-close class="improve-bg"></div>
+  <div id="improve-modal" class="improve-modal">
+    <div data-improve-close class="improve-close"><i class="octicon octicon-x"></i></div>
+    <h3><i class="octicon octicon-pencil"></i> Improve this page</h3>
+    <div id="improve-modal-content">
+      <p>Anyone can propose improvements to this page, while quite easy this is a multi-step process and you'll also need a free <a href="https://github.com/join">GitHub account</a>. Alternatively you can file a report and have an editor do the work for you.</p>
+
+
+      <div class="improve-actions">
+        <div class="improve-action">
+          <a href="{{ edit_link }}" class="button button-improve" data-proofer-ignore>
+            <i class="octicon octicon-git-pull-request fa-fw"></i>
+            Propose improvements
+          </a>
+          <p>Slower, but helps us more.</p>
+        </div>
+        <div class="improve-action">
+          <a data-report-this-page class="button button-report" href="https://github.com/urn/urn-history-project/issues/new?body={{page.url}}" data-proofer-ignore>
+            <i class="ion-chatbox-working"></i>
+            Message editors instead
+          </a>
+          <p>Quicker, less technically demanding.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+{% endunless %}
+
+<script type="text/template" id="report-success-template">
+  <div class="box-success">
+    <i class="octicon octicon-check"></i> Report submitted successfully.
+  </div>
+
+  <p>Thanks for the report, you can check on progress at the following address:</p>
+
+  <p class="report-link"><a href="<%=url%>"><%=url%></a></p>
+
+  <p>If you have not yet registered for the Alumni Network <a href="http://urn1350.net/alumni/registration/" target="_blank">please do so here</a>.</p>
+
+  <p>If you have any photographs or other media relating to this page please see the <a href="/upload/">sending in images</a> page.</p>
+</script>
+
+{% endunless %}

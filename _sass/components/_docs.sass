@@ -1,0 +1,82 @@
+// Styling for the /docs/ pages
+
+$inner-width: 87%
+
+.docs
+  @include grid-wrap
+  margin-bottom: $baseline * 2
+
+  .docs-nav
+    @include grid-x-col(5)
+    .docs-nav-inner
+      width: $inner-width
+      padding: 20px
+      background: darken($color-urn-purple, 20%)
+    ul
+      @include list-unformatted
+      margin-bottom: 0
+      li
+        position: relative
+        padding-bottom: $baseline / 2
+      i
+        // Disconnect icon from text
+        position: absolute
+        display: inline-block
+        opacity: 0.3
+
+        &.ion-chevron-right
+          opacity: 1
+      a
+        // Force text over, even when it wraps
+        display: inline-block
+        margin-left: 1.6rem
+    h2
+      font-size: 24px
+      line-height: $baseline
+
+  .docs-content
+    @include grid-x-col(11)
+
+    img
+      max-width: 100%
+
+
+.docs-nav-tabs
+  @include grid-clear
+  width: $inner-width
+
+  .docs-nav-tab
+    float: left
+    width: 50%
+    background: darken($color-urn-purple, 30%)
+
+    a
+      display: block
+      padding: $baseline / 2
+      text-align: center
+      color: darken($color-urn-purple, 20%) // Slightly lighter than the background for inactive tab
+      text-transform: uppercase
+      font-size: $base-font-size * 0.8
+      @include no-underline
+
+    &.current
+      background: darken($color-urn-purple, 22%)
+      a
+        color: darken($color-text-white, 2%)
+
+#github-issues-widget
+  background: #f7f7f7
+  border: none
+  padding: $baseline / 4
+
+.def-table
+  tr:target
+    background: rgba(255,255,255,0.1)
+  .def-table-attr__attr-name
+    background: $color-debug-attr-base
+  .def-table-attr__generated
+    .def-table-attr__attr-name
+      background: $color-debug-attr-generated
+  .def-table-attr__required
+    .def-table-attr__attr-name
+      background: $color-debug-attr-required

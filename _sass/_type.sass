@@ -1,0 +1,345 @@
+// Typography
+
+*
+  font-family: $body-font-stack
+  -webkit-tap-highlight-color: rgba(0,0,0,0)
+
+::selection
+  background: $color-selection
+  color: $color-text-black
+
+body
+  color: $color-text
+
+@mixin block
+  // Element is a block, should have suitable bottom margin
+  margin-bottom: $baseline
+
+.block
+  @include block
+
+// HEADER STYLING
+
+h1, h2, h3, h4, h5, h6, p, li, th, td, ul
+  // Test this, make red or something and check whole site for
+  // non-selected elements.
+  &:last-child
+    // Remove bottom margins if element is last in it's container.
+    // The container should set it's own padding for this.
+    margin-bottom: 0
+
+h1, h2, h3, h4, h5, h6
+  font-family: $header-font-stack
+  // HACK correction from moving from GF Montserrat to latest
+  letter-spacing: $montserrat-letter-spacing
+  @include block
+
+.h1-baseline
+  line-height: $baseline * 3
+.h2-baseline
+  line-height: $baseline * 2
+.h3-baseline
+  line-height: $baseline
+.h4-baseline
+  line-height: $baseline
+.h5-baseline
+  line-height: $baseline
+.h6-baseline
+  line-height: $baseline
+
+h1
+  @extend .h1-baseline
+  font-size: $base-font-size * 2.9
+  @include respond-down(mob-port)
+    font-size: $base-font-size * 2.4
+h2
+  @extend .h2-baseline
+  font-size: $base-font-size * 2.4
+h3
+  @extend .h3-baseline
+  font-size: $base-font-size * 1.5
+h4
+  @extend .h4-baseline
+  font-size: $base-font-size * 1.25
+h5
+  @extend .h5-baseline
+  font-size: $base-font-size
+h6
+  @extend .h6-baseline
+  font-size: $base-font-size * 0.8
+
+.headerlite
+  font-size: 0.7em
+  font-weight: $font-weight-light
+
+// GENERIC TEXT STYLING
+
+@mixin normal-text-nobr
+  line-height: $baseline
+  font-size: $base-font-size
+  margin-bottom: 0
+
+@mixin normal-text
+  @include normal-text-nobr
+  @include block
+
+@mixin compact-text-nobr
+  line-height: $baseline
+  font-size: $base-font-size-compact
+  margin-bottom: 0
+
+@mixin compact-text
+  @include compact-text-nobr
+  @include block
+
+p
+  @include normal-text
+
+.compact
+  @include compact-text
+
+.aside
+  @include compact-text
+  font-style: italic
+  color: $color-grey
+
+// Bigger versions of stuff
+h1.display, .display h1
+  @include respond-up(mob-port)
+    font-size: 76px
+  @include respond-up(tab-port)
+    font-size: 96px
+
+p.display, .display p
+  @include respond-up(mob-port)
+    // No change
+  @include respond-up(tab-port)
+    font-size: $base-font-size * 1.8
+    line-height: $baseline * 2
+
+// ELEMENT INTERFACES
+
+.nobr
+  // No break
+  margin-bottom: 0
+
+p + h1, p + h2, p + h3
+  // Big headings after paragraphs
+  margin-top: $baseline * 2
+p + h4, p + h5, p + h6
+  // Small headings after paragraphs, padding is just what p has for margin-bottom
+
+@mixin header-top-nobr
+  p + h1, p + h2, p + h3
+    // Big headings after paragraphs
+    margin-top: 0
+  p + h4, p + h5, p + h6
+    // Small headings after paragraphs, padding is just what p has for margin-bottom
+
+// LINK STYLING
+
+$link-border-bottom-opacity: 0.2
+
+@mixin link-colour($color)
+  color: $color
+  text-decoration: none
+
+  &:visited
+    color: darken($color-link, 10%)
+
+  &:hover
+    color: lighten($color, 20%)
+    text-decoration: underline
+
+@mixin no-underline($on-hover: false)
+  // No underlines on normal and hover states
+  text-decoration: none
+  &:hover
+    @if $on-hover
+      text-decoration: underline
+    @else
+      text-decoration: none
+
+a
+  font-weight: $font-weight-bold
+  @include link-colour($color-link)
+
+a.pagelink
+  &:before
+    // content: "\x9B "
+  &:after
+    content: "\x85"
+
+.bracketed
+  color: $color-grey
+
+// FOCUS STATE
+
+// Following advice from Google's a11y cast [1] we remove the outline by default
+// to provide a better experience for mouse users. The psuedo-class :focus-ring
+// then re-adds it when navigating via the keyboard. This is a new feature and
+// isn't well supported, so we use a polyfill [2] which uses the class .focus-
+// ring instead of the pseudo element.
+
+// [1]: https://www.youtube.com/watch?v=ilj2P5-5CjI&list=PLNYkxOF6rcICWx0C9LVWWVqvHlYJyqw7g&index=1
+// [2]: https://github.com/WICG/focus-ring
+
+// Getting weird behaviour with Sass and the :focus selector. It doesn't like
+// :focus-ring, .focus-ring, appears to be moving the colon around. It really
+// doesn't like :focus:not(:focus-ring)! Focus cannot exist outside of another
+// selector???
+
+// ^^ Update, seems that the CSS post-processor combines these even when in
+// ^^ source they're separated. Commented out for now, see #791.
+
+// Riiight: seems like sass needs a backslash at the start of the line
+// Also seems that browsers (Chrome) ignore the whole selector if it contains
+// something it doesn't understand (:focus-ring), eugh. Have to separate
+// selectors.
+
+@mixin focus-ring
+  outline: 3px dashed $color-focus
+  outline-offset: 2px
+
+// \:focus:not(:focus-ring)
+//   outline: none
+
+\:focus:not(.focus-ring)
+  outline: none
+
+// \:focus-ring
+//   @include focus-ring
+
+.focus-ring
+  @include focus-ring
+
+// Focus for form fields and the like. Shows to all users, so make less
+// obnoxious (yet still useful).
+@mixin field-focus
+  &:focus
+    outline: 6px solid rgba($color-focus, 0.4)
+    outline-offset: 0
+
+input[type=text], input[type=search], input[type=number], input[type=date],
+input[type=time], input[type=datetime], textarea
+  @include field-focus
+
+// For places where the normal focus doesn't quite cut it
+@mixin extra-focus
+  &.focus-ring
+    background: white !important
+    color: black !important
+
+// INLINE STYLES
+
+strong
+  font-weight: $font-weight-bold
+
+.unknown
+  display: inline-block
+  background: darken($color-urn-purple, 20%)
+  padding: 1px 6px
+
+.tag
+  display: inline-block
+  background: darken($color-urn-purple, 20%)
+  padding: 0 6px
+
+.octicon
+  // Octicons
+  font-size: inherit
+
+@mixin text-shadow-effect($background)
+  text-shadow: 0 -1px 0 darken($background, 20%)
+
+.micro, .micro a
+  // small text
+  font-size: $base-font-size * 0.7
+
+.subtle
+  // subtle text
+  opacity: 0.2
+  color: $color-text-white
+
+  &:visited
+    color: $color-text-white
+
+  &:hover
+    opacity: 1
+    color: $color-link
+
+// BLOCK LEVEL ELEMENTS
+
+ul, ol
+  @include block
+  margin-left: $baseline
+  li
+    padding-bottom: $baseline
+    &:last-child
+      padding-bottom: 0
+  &.minimal
+    margin-left: 0
+  h3, h4, h5, h6
+    font-weight: $font-weight-bold
+
+ul
+  list-style: square
+
+@mixin list-unformatted
+  margin-left: 0
+  li
+    padding-bottom: 0
+  list-style: none
+
+blockquote
+  @include block
+  $bord: 4px
+  border-left: $bord solid $color-grey
+  padding-left: $bord * 4
+  margin-left: 3em
+  margin-right: 3em
+
+  font-style: italic
+
+pre
+  @include block
+
+code
+  // Monospace :)
+  &, *
+    // Override the body font stack
+    font-family: monospace
+  background: rgba($color-background-alt, 0.4)
+  padding: 2px 3px
+  white-space: pre-wrap
+  word-wrap: break-word
+
+figure.highlight
+  background: $color-background-alt
+  color: $color-text-white
+  padding: $base-font-size / 2
+  // Make jekyll highlight a block
+  @include block
+  pre
+    white-space: pre-wrap
+    margin-bottom: 0 // Pre is block
+  code
+    background: none
+
+.external-link
+  .icon
+    // @extend .ion-earth
+    padding-left: 2px
+    color: $color-grey
+
+dl
+  dt
+    font-weight: $font-weight-bold
+  dd
+    margin-bottom: $baseline / 2
+
+.no-line-height
+  line-height: 1em
+
+.rhs
+  text-align: right

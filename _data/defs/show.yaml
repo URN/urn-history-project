@@ -1,0 +1,222 @@
+---
+- attr: title
+  type: string
+  short: Show title
+  description: "Displayed at the top of the show page and on various other pages. Should be the title of this performance, may not quite match the title of the play – see `canonical`."
+  required: true
+
+- attr: playwright
+  type: string
+  short: Full name of the playwright
+  description: "Omit if using devised, set to `various` if compilation."
+
+- attr: devised
+  short: Used if play was devised
+  description: "Either `true` for generic output or a descriptor. Example descriptor: `Cast and Crew` will output “Devised by Cast and Crew”. Omit if using playwright."
+
+- attr: adaptor
+  type: string
+  short: Full name of adaptor
+  description: "Outputs as “Adapted by adaptor”."
+
+- attr: translator
+  type: string
+  short: Full name of the translator
+  description: "Outputs as “Translated by translator”."
+
+- attr: playwright_type
+  type: string
+  short: Playwright type
+  description: Either `playwright`, `devised`, `various`, or `unknown`.
+  generated: true
+
+- attr: playwright_formatted
+  type: string
+  short: Short form formatted playwright string
+  description: Excludes adaptor and other additional details.
+  generated: true
+
+- attr: playwright_formatted_long
+  type: string
+  short: Long form formatted playwright string
+  description: Includes adaptor and othe additional details.
+  generated: true
+
+- attr: canonical
+  # type: not defined yet
+  short: List of canonical titles and playwrights for reverse lookup.
+  description: "Specify titles and/or playwrights in a list. See [#486](https://github.com/urn/urn-history-project/issues/486)."
+
+- attr: student_written
+  type: boolean
+  short: Show written by a NNT member
+  description: "Set to `true`; `false` or line missing are equivalent."
+
+- attr: company
+  type: string
+  short: Non-NNT only, the name of the company
+
+- attr: period
+  type: string
+  short: Autumn, Spring or Year Long. Omit if unknown.
+
+- attr: show_type
+  type: string
+  short: Show_type show belongs to
+  description: "Choices: `Autumn`, `Spring` or `Year Long`."
+  required: true
+
+- attr: show_type_path
+  type: string
+  short: Absolute path to show_type page
+  description: "Path instead of document as show pages data is generated before show_type documents exist."
+  generated: true
+
+- attr: show_type_sort
+  type: number
+  short: Order which this show comes in the entire year
+  description: "Use multiples of 10 for ease of additions.\nRoughly: Autumn should start at 30, Spring 200 and Edinburgh 400. Shows then fall at 30, 40, 50 *&c*"
+  required: true
+
+- attr: ignore_missing
+  type: boolean
+  short: Suppresses missing detail warnings
+  description: "Is `true` when show_type matches External, Postgrads or STUFF."
+  generated: true
+
+- attr: year
+  type: string
+  short: Year identifier
+  description: YY_YY
+  generated: true
+
+- attr: year_page
+  type: document
+  short: Year page
+  generated: true
+
+- attr: seq_index
+  type: number
+  short: Index of set of all shows
+  description: "Zero is youngest show."
+  generated: true
+
+- attr: seq_next
+  type: document
+  short: Show page next in sequence
+  description: "`seq_index` + 1"
+  generated: true
+
+- attr: seq_previous
+  type: document
+  short: Show page previous in sequence
+  description: "`seq_index` - 1"
+  generated: true
+
+- attr: redirect_from
+  type: array
+  short: Array of URLs to redirect to this record
+  description: "Used to migrate from old URL scheme to new; jekyll-redirect-from generates the redirects (pages with meta redirect tags)."
+  generated: true
+
+- attr: venue
+  type: string
+  short: Venue show was performed in.
+  description: "Used to match all shows performed in venue, ensure text matches."
+
+- attr: venue_sort
+  type: string
+  short: Group of venues venue belongs to.
+  description: "Will group show together with other shows with the same sort. For example C cubed, C nova, C soco, C too can all be grouped as C venues."
+
+- attr: venue_path
+  type: string
+  short: Absolute path to venue page
+  description: "Path instead of document as show pages data is generated before venue documents exist."
+  generated: true
+
+- attr: date_start
+  type: date
+  short: Date of first performance
+  description: "In the format YYYY-MM-DD."
+
+- attr: date_end
+  type: date
+  short: Date of last performance
+  description: "In the format YYYY-MM-DD, omit if show only ran one day."
+
+- attr: tour
+  type: array
+  short: List of tours the show has been on (NSDF &c).
+  description: "Specify venue, date_start, date_end and notes. See [#12](https://github.com/urn/urn-history-project/issues/12). Shows taken to Edinburgh should have a separate show created under the Edinburgh period."
+
+- attr: excerpt
+  type: string
+  description: "Generated excerpt of synopsis for use in search results and other summaries."
+  generated: true
+
+- attr: trivia
+  type: array
+  short: List of trivia hashes.
+  description: "List of trivia / anecdotes / short stories about the show. See [trivia list](/docs/trivia-list/)."
+
+- attr: cast
+  type: array
+  short: Cast members
+  description: "Uses the [person list](/docs/person_list/) format."
+
+- attr: cast_incomplete
+  type: boolean
+  short: Incomplete Cast
+  description: Enforces the 'Missing Details' box to appear regardless of cast size.
+
+- attr: cast_note
+  type: string
+  description: Replaces the text in the default 'Missing Details' box with a custom string (does not replace the call to action). Only appears when `cast_incomplete` is set to `true`, as there is no minimum cast size.
+
+- attr: crew
+  type: array
+  short: Crew members
+  description: "Uses the [person list](/docs/person_list/) format."
+
+- attr: crew_incomplete
+  type: boolean
+  short: Incomplete Crew
+  description: Enforces the 'Missing Details' box to appear regardless of crew size (automatically appears when there are fewer than 5 crew).
+
+- attr: crew_note
+  type: string
+  description: Replaces the text in the default 'Missing Details' box with a custom string (does not replace the call to action).
+
+- attr: prod_shots
+  type: string
+  short: SmugMug album ID for production shots
+  description: "Use [util/smug-albums](/util/smug-albums/) to find the AlbumID. Fetch is limited to the first 350 items."
+
+- attr: smugmug_album
+  type: hash
+  short: SmugAlbum object for prod_shots
+  generated: true
+
+- attr: assets
+  type: array
+  short: Publicity and other materials
+  description: "Uses the [photos and assets](/docs/photos_and_assets/) format."
+
+- attr: poster
+  type: hash
+  short: Selected asset to use as show poster
+  description: Currently identical to `display_image`.
+  generated: true
+
+- attr: display_image
+  type: hash
+  short: Selected asset to use as show display image
+  description: "Used to represent show in search results, people records *&c*. Order of precedence: override assets, posters, flyers, programmes."
+  generated: true
+
+- attr: comment
+  type: string
+  short: Reserved for editor comments
+  description: "Displayed in editors’ mode."
+  generated: false

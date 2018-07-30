@@ -1,0 +1,200 @@
+---
+layout: default
+body_class: layout-person header-nobr content-nobr
+---
+{% assign person = page %}
+{% capture submit_link %}/collect/person/?name={{person.path_name}}{% endcapture %}
+
+<div class="person">
+
+  <div class="grid-wrap grid-row debug" data-debug-toggle>
+    {% include def-data.html def=site.data.defs.person model='person' %}
+  </div>
+
+  <!-- Full width -->
+  <header class="person-header">
+    <div class="person-headshot">
+      {% if person.headshot %}
+        {% include images/person-headshot.html
+                   image=person.headshot
+                   sizes="(min-width: 768px) 10rem, 6rem"
+                   alt=person.name %}
+      {% else %}
+        <img class="person-headshot-placeholder" src="/images/human-512-cropped.png" alt="Human silhouette" />
+      {% endif %}
+    </div>
+
+    <div class="person-details">
+      <h1 class="person-name">{{ person.title | escape_once }}</h1>
+    </div>
+
+    <div class="person-graduated">
+      {% if person.student %}
+      <div class="person-graduated-inner person-graduated-student">
+        Student
+      </div>
+      {% elsif person.graduated_actual %}
+      <div class="person-graduated-inner person-graduated-actual decade-background-{{ person.decade }}">
+        {{ person.graduated }}
+      </div>
+      {% elsif person.graduated %}
+      <div class="person-graduated-inner person-graduated-estimated decade-background-{{ person.decade }}" title="Estimated">
+        {{ person.graduated }}
+      </div>
+      <div class="person-graduated-estimated-text">Estimated</div>
+      {% else %}
+        <div class="person-graduated-inner person-graduated-unknown">
+          Unknown
+        </div>
+      {% endif %}
+    </div>
+  </header>
+
+
+  <div class="person-body">
+
+    {% if person.has_bio %}
+    <!-- Person has submitted a bio -->
+    <article class="person-bio">
+      <h2>Biography</h2>
+      {{ content }}
+
+      {% if person.submitted %}
+      <p class="person-bio-last-updated">
+        Bio last updated
+        <span data-date="{{ person.submitted }}"
+              title="{{ person.submitted }}">{{ person.submitted }}</span>,
+        <a href="{{ submit_link }}">submit updates</a>.
+      </p>
+      {% else %}
+      <p class="person-bio-last-updated">
+        This bio was written by an editor, <a href="{{ submit_link }}">submit updates</a>.
+      </p>
+      {% endif %}
+    </article>
+
+    {% else %}
+    <!-- Person not submitted -->
+    <div class="person-submit">
+      <div class="box-warning">
+        <i class="fa fa-question"></i>
+        <h3>Missing Biography</h3>
+        <p>We are collecting biographies on New Theatre alumni, if this is you please <a href="{{ submit_link }}">submit one here</a>.</p>
+      </div>
+    </div>
+    {% endif %}
+
+    <section class="person-past">
+      <h2>Then</h2>
+      <dl class="person-meta-list">
+        {% for course in person.course %}
+          <dt><i class="fa fa-fw fa-book"></i>Course</dt>
+          <dd>{{ course }}</dd>
+        {% else %}
+          <dt><i class="fa fa-fw fa-book"></i>Course</dt>
+          <dd><span class="unknown">Unknown</span></dd>
+        {% endfor %}
+
+        {% if person.award %}
+        <dt><i class="fa fa-fw fa-trophy"></i>Award</dt>
+        <dd>{{ person.award }}</dd>
+        {% endif %}
+
+        {% if person.committees %}
+        <dt><i class="fa fa-fw fa-group"></i>Committees</dt>
+        <dd>
+          <ul class="person-meta-list">
+          {% for record in person.committees %}
+            <li>
+              <a href="{{ record.item.year_page.url }}" class="person-meta-year">
+               {{ record.item.title }}
+              </a>
+              {% for role in record.roles %}
+                <span class="person-meta-role">{{ role | escape_once }}</span>
+              {% endfor %}
+            </li>
+          {% endfor %}
+          </ul>
+        </dd>
+        {% endif %}
+      </dl>
+    </section>
+
+    {% if person.placeholder == false %}
+    <!-- Person has a file -->
+
+    <section class="person-current">
+      <h2>Now</h2>
+      <dl class="person-meta-list">
+
+      {% for career in person.careers %}
+        <dt><i class="fa fa-fw fa-building"></i>Career</dt>
+        <dd>{{ career }}</dd>
+      {% endfor %}
+
+      </dl>
+
+      {% include link-list.html links=person.links %}
+
+      {% include link-list.html links=person.news %}
+
+    </section>
+
+    {% endif %}
+
+  </div>
+
+</div>
+
+
+{% if person.shows %}
+<div class="person-shows-outer">
+  <section class="person-shows">
+    {% for record in person.shows %}
+    <div class="person-show">
+      <a href="{{ record.item.url }}" title="{{ record.item.title | escape_once }}">
+        <div class="person-show-poster">
+          {% if record.item.poster %}
+            {% include images/show-poster-thumb.html
+                       image=record.item.poster
+                       sizes="(max-width: 420px) 50vw, (max-width: 768px) 33vw, 170px"
+                       alt=record.item.title
+                       lazy=true %}
+          {% else %}
+            <!-- Missing Poster -->
+          {% endif %}
+        </div>
+
+        <h3 class="person-show-title">
+          {{ record.item.title | escape_once }}
+        </h3>
+
+        <div class="person-show-meta">
+          <span class="person-show-show_type show_type-{{ record.item.show_type | downcase | replace:" ","-" }}" title="{{ record.item.show_type }}"></span>
+          <span class="person-show-year">{{ record.item.year_page.title }}</span>
+        </div>
+
+        <ul class="person-show-roles">
+        {% for role in record.roles %}
+          <li>{{ role | escape_once }}</li>
+        {% endfor %}
+        </ul>
+      </a>
+    </div>
+    {% endfor %}
+  </section>
+{% else %}
+
+<div class="wrapper">
+  <div class="full-width block">
+    <div class="box-warning">
+      <i class="fa fa-question"></i>
+      <h3>Missing Show Credits</h3>
+      <p>We don't have any show credits on record for {{ person.title | escape_once }}, if you know of any please <a href="https://github.com/urn/urn-history-project/issues/new?body={{page.url}}" data-proofer-ignore data-report-this-page>send the editors a message</a>.</p>
+    </div>
+  </div>
+</div>
+
+{% endif %}
+
+</div>

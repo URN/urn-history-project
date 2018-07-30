@@ -1,0 +1,63 @@
+// Block level content boxes
+
+.box-error, .box-warning, .box-success, .box-info, .box-debug
+  padding: $baseline
+  margin-bottom: $baseline
+  position: relative
+  color: $color-text-white
+
+  &:last-child
+    margin-bottom: 0
+
+  h2, h3, h4, h5, h6
+    margin-bottom: 1rem
+
+  i
+    position: absolute
+    top: 7px
+    right: 9px
+    color: $color-grey
+    font-size: $base-font-size * 4
+    opacity: 0.2
+    pointer-events: none // Prevents icon getting in the way of link on top of it
+    &.fa-exclamation-triangle
+      top: 8px
+      right: 8px
+      font-size: 62px
+    &.fa-question
+      top: 3px
+      right: 12px
+    &.fa-camera
+      top: 10px
+      right: 11px
+      font-size: 58px
+    &.fa-info-circle
+      top: 3px
+    &.ion-help
+      top: -7px
+      right: 12px
+
+.box-error
+  background: $color-error
+  code
+    background: darken($color-error, 7%)
+.box-warning
+  background: $color-warning
+  code
+    background: darken($color-warning, 7%)
+.box-success
+  background: $color-success
+  code
+    background: darken($color-success, 7%)
+.box-info
+  background: $color-info
+  code
+    background: darken($color-info, 7%)
+
+.box-debug
+  display: none
+  background: #000
+  color: $color-debug
+  font-family: monospace
+  code
+    background: darken($color-info, 7%)

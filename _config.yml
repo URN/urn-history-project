@@ -1,0 +1,299 @@
+# Site settings
+title: University Radio Nottingham History Project
+email: history@urn1350.net
+twitter: urnalumni
+description: "Archive project collecting past shows, committees and alumni biographies to piece together the station's dynamic and vibrant history."
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "https://history.urn1350.net" # the base hostname & protocol for your site
+#ntbot_endpoint: "https://703eeix5l8.execute-api.eu-west-1.amazonaws.com/prod/issue" # For issue posting
+assets_baseurl: "https://assets.history.urn1350.net"
+
+# How many shows is too few for a year
+year_low_shows: 16
+# How many crew members is too few for a show
+show_low_crew: 0
+# How many members members is too few for a committee
+committee_low_members: 13
+
+# Styling vars shared between (CSS and) HEAD
+# (CSS now separate from Jekyll build)
+color_urn_purple: "#5e44cb"
+color_urn_orange: "#e63d9b"
+
+# Build settings
+markdown: kramdown
+permalink: pretty
+
+plugins:
+- jekyll-sitemap
+- jekyll-redirect-from
+
+include:
+- _headers
+
+exclude:
+- assets/
+- bower.json
+- coffeelint.json
+- CONTRIBUTING.md
+- Dockerfile
+- LICENCE
+- Gemfile
+- Gemfile.lock
+- googlee5aee69e17917677.html
+- gulpfile.js
+- images/
+- lib/
+- manifest.json
+- node_modules/
+- package.json
+- Rakefile
+- README.md
+- run_dev.sh
+- tmp/
+- Vagrantfile
+- vendor/
+
+# Don't clean these in _site, we use gulp to generate them
+keep_files:
+- css
+- googlee5aee69e17917677.html
+- images
+- js
+- lib
+- manifest.json
+
+# skip_years: true
+# skip_venues: true
+# skip_show_types: true
+# skip_virtual_people: true
+# skip_opengraph: true
+
+# enable_debug_table: true
+
+# Specify year range for generation
+year_start: 1979
+year_end: 2017
+
+# Estimation conf
+estimate_recency_limit: 2 # How many years to wait until guessing someone has left
+
+collections:
+  content:
+    output: true
+    permalink: :path/
+  shows:
+    output: true
+    # Generate the legacy path for 301 redirect re. #142 Make semantic and pretty urls
+    permalink: years/:path/
+  committees:
+    output: true
+    permalink: years/:path/committee/
+  years:
+    output: true
+    permalink: years/:path/
+  venues:
+    output: true
+    permalink: venues/:path/
+  show_types:
+    output: true
+    permalink: show_types/:path/
+  people:
+    output: true
+    permalink: people/:path/
+
+defaults:
+  # Shows
+  - scope:
+      path: ""
+      type: shows
+    values:
+      layout: show
+      body_class: header-nobr
+      current: archives
+      period: unknown
+  # Committees
+  - scope:
+      path: ""
+      type: committees
+    values:
+      layout: committee
+      current: archives
+  # Years
+  - scope:
+      path: ""
+      type: years
+    values:
+      layout: year
+      group: year
+      body_class: header-nobr
+      current: archives
+      editable: false
+      sitemap: false
+  - scope:
+      path: ""
+      type: venues
+    values:
+      layout: venue
+      group: venue
+      body_class: header-nobr
+      current: archives
+      editable: false
+  - scope:
+      path: ""
+      type: show_types
+    values:
+      layout: show_type
+      group: show_type
+      body_class: header-nobr
+      current: archives
+      editable: false
+  # People
+  - scope:
+      path: ""
+      type: people
+    values:
+      layout: person
+      group: person
+      current: people
+      contact_allowed: false
+      placeholder: false
+      award: []
+      careers: []
+      links: []
+      news: []
+  - scope:
+      path: "about"
+    values:
+      current: about
+  - scope:
+      path: "docs"
+    values:
+      current: about
+  - scope:
+      path: "util"
+    values:
+      layout: util
+      group: util
+      sitemap: false
+      search: false
+
+image:
+  source: images
+  output: images/resized
+  presets:
+    show_poster_thumb:
+      attr:
+        class: show-poster-thumb
+        alt: Show poster
+      width: 40
+    show_poster_thumb_sr:
+      attr:
+        class: search-result-poster-thumb
+        alt: Show poster
+      width: 140
+    person_show_poster:
+      attr:
+        alt: Show poster
+      width: 200
+    show_poster:
+      attr:
+        class: show-poster
+        alt: Show poster
+      width: 440
+    posterwall:
+      attr:
+        alt: Show poster
+      width: 440
+    show_asset:
+      attr:
+        alt: Show asset
+      width: 190
+    show_photo:
+      attr:
+        alt: Show photo
+      width: 300
+    person_headshot:
+      attr:
+        alt: Person headshot
+      width: 160
+    person_headshot_micro:
+      attr:
+        alt: Person headshot
+      width: 48
+
+# Config for the prose editor
+prose:
+  ignore: ['_bin', '_utilities', 'CNAME', '.gitignore', 'js', 'css', '_site', '_sass', '_layouts', '_includes', '.travis.yml', 'Gemfile', 'Gemfile.lock', 'lib', 'js', '_plugins', 'feeds', '_years', '.bowerrc', '.gitmodules', '_config.yml', 'bower.json', 'googlee5aee69e17917677.html', 'package.json', 'robots.txt']
+  siteurl: "https://history.urn1350.net"
+  media: "images"
+  metadata:
+    _shows:
+      - name: "published"
+        field:
+          element: "hidden"
+          value: true
+      - name: "title"
+        field:
+          element: "text"
+          label: "Show Name"
+      - name: "playwright"
+        field:
+          label: "Playwright"
+          element: "text"
+      - name: "student_written"
+        field:
+          label: "Student Written"
+          help: "Is this show written by an NT member?"
+          element: "boolean"
+      - name: "show_type"
+        field:
+          label: "Show_type"
+          element: "select"
+          options:
+            - name: "After Dark"
+              value: "After Dark"
+            - name: "Culture"
+              value: "Culture"
+            - name: "Daytime"
+              value: "Daytime"
+            - name: "News"
+              value: "News"
+            - name: "Sport"
+              value: "Sport"
+      - name: "show_type_sort"
+        field:
+          label: "Show_type Sort"
+          element: "text"
+          help: "Number used to sort the show_type. Use multiples of ten for flexibility, i.e. the third show of the show_type would be 30."
+      - name: "period"
+        field:
+          label: "Show_type Period"
+          element: "select"
+          options:
+            - name: "Autumn"
+              value: "Autumn"
+            - name: "Spring"
+              value: "Spring"
+            - name: "Year Long"
+              value: "Year Long"
+      - name: "venue"
+        field:
+          element: "text"
+          label: "Venue"
+          help: "Venue show was performed in."
+      - name: "date_start"
+        field:
+          element: "text"
+          label: "Start Date"
+          help: "Date of first performance in format YYYY-MM-DD"
+      - name: "date_end"
+        field:
+          element: "text"
+          label: "End Date"
+          help: "Date of last performance in format YYYY-MM-DD"
+    _committees:
+      - name: "published"
+        field:
+          element: "hidden"
+          value: true

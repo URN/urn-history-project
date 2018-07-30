@@ -1,0 +1,77 @@
+{% capture unknowns %}
+{% for person in include.people %}
+{% if person.role == "unknown" %}
+X
+{% elsif person.name == "unknown" %}
+X
+{% endif %}
+{% endfor %}
+{% endcapture %}
+
+{% if unknowns contains "X" %}
+{% include boxes/person_list_unknowns.html %}
+{% endif %}
+
+<ul class="person-list">
+{% for person in include.people %}
+  <li class="person-single">
+
+    {% if person.comment %}
+    <div class="debug-comment" data-debug-toggle>{{ person.comment }}</div>
+    {% endif %}
+
+    {% if person.person != false and person.name != "" and person.name != "unknown" %}
+      <a href="{% person_url {{ person.name }}%}">
+      {% assign linked_single = true %}
+    {% else %}
+      {% assign linked_single = false %}
+    {% endif %}
+
+    <div class="person-headshot-container">
+      {% if person.person_record %}
+
+        {% if person.person_record.headshot %}
+          {% include images/person-headshot.html
+                     image=person.person_record.headshot
+                     sizes="41px"
+                     alt=person.name %}
+        {% else %}
+          <img src="/images/human-48.png"
+               alt="No Headshot"
+               class="person-headshot {% if person.person_record.submitted %}person-headshot--submitted{% else %}person-headshot--placeholder{% endif %}" />
+        {% endif %}
+
+      {% else %}
+        <img src="/images/human-48.png" alt="No Headshot" class="person-headshot person-headshot--no-record" />
+      {% endif %}
+    </div>
+
+    <div class="person-role">
+      {% if person.role == "unknown" %}
+        <span class="unknown">Unknown</span>
+      {% else %}
+        {% if site.data.role-icons[person.role] and include.enable_role_icons != false %}
+        <i class="{{ site.data.role-icons[person.role] }}"></i>
+        {% endif %}
+
+        {{ person.role | escape_once }} {% if person.note %}({{ person.note | escape_once }}){% endif %}
+      {% endif %}
+    </div>
+    <div class="person-name">
+      {% if person.name == "unknown" %}
+        <span class="unknown">Unknown</span>
+      {% else %}
+        <span class="person-name-underline">{{ person.name | escape_once }}</span>
+      {% endif %}
+    </div>
+
+    {% if linked_single %}</a>{% endif %}
+
+  </li>
+{% endfor %}
+
+</ul>
+
+<p class="micro rhs">
+  <a href="https://github.com/urn/urn-history-project/issues/new?body={{page.url}}" class="subtle" data-proofer-ignore data-report-this-page>Someone missing? Message the editors&hellip;</a>
+</p>

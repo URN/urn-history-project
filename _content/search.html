@@ -1,0 +1,96 @@
+---
+layout: default
+title: Search
+editable: false
+body_class: header-nobr search
+sitemap: false
+search: false
+---
+
+<div class="search-form">
+  <!-- Search form -->
+  <form method="get" action="/search" data-search-form>
+  <div class="search-form-inner">
+    <i class="ion-search"></i>
+    <input class="search-q" type="search" name="q" id="q" placeholder="Enter search term" data-search-input />
+  </div>
+  </form>
+</div>
+
+<div class="search-results">
+  <!-- Search results placeholder -->
+
+  <div data-search-results>
+
+    <div class="search-loading">
+      <i class="fa fa-cog fa-spin"></i>
+    </div>
+
+  </div>
+
+
+
+  <!-- Search result template -->
+  <script type="text/x-template" id="search-result">
+    <div>
+    <% if (item.type == "show") { %>
+      <div class="search-result">
+        <h3 class="search-result-show-title">
+          <% if (item.poster_thumb_tag) { %><%= item.poster_thumb_tag %><% } else { %><i class="fa fa-ticket"></i><% } %>
+          <a href="<%= item.link %>"><%= item.title %></a>
+          <% if (item.playwright) { %><span class="search-result-playwright"><%= item.playwright_formatted_long %></span><% } %>
+          </h3>
+        <p class="meta"><%= item.run %><% if (item.venue) { %> at <%= item.venue %><% } %>, <%= item.show_type %></p>
+        <p><%= item.excerpt %></p>
+      </div>
+    <% } else if (item.type == "person") { %>
+      <div class="search-result">
+        <h3 class="search-result-person-title">
+          <% if (item.poster_thumb_tag) { %><%= item.poster_thumb_tag %><% } else { %><i class="ion-ios-person"></i><% } %>
+          <a href="<%= item.link %>"><%= item.title %></a>
+          </h3>
+        <p class="meta"><%= item.graduated %><% if (item.award) { %> <%= item.award %><% } %></p>
+        <p><%= item.excerpt %></p>
+      </div>
+    <% } else { %>
+      <% if (item.group == "about") { %>
+        <div class="search-result">
+          <h3><i class="octicon octicon-circuit-board"></i> <a href="<%= item.link %>"><%= item.title %></a></h3>
+          <p><%= item.excerpt %></p>
+        </div>
+      <% } else if (item.group == "docs") { %>
+        <div class="search-result">
+          <h3><i class="fa fa-file-text-o"></i> <a href="<%= item.link %>"><%= item.title %></a></h3>
+          <p><%= item.excerpt %></p>
+        </div>
+      <% } else { %>
+        <div class="search-result">
+          <h3><i class="fa fa-file"></i> <a href="<%= item.link %>"><%= item.title %></a></h3>
+          <p><%= item.excerpt %></p>
+        </div>
+      <% } %>
+    <% } %>
+    </div>
+  </script>
+  <script type="text/x-template" id="search-message-empty">
+
+    <div class="search-results-empty">
+      <h2>Nope, nothing here&hellip;</h2>
+      <p>Sorry, but we couldn't find anything on this site about "<%= query %>"</p>
+
+    </div>
+
+    <div class="search-results-collect">
+      <div class="box-info">
+        <i class="ion-help"></i>
+        <h4>Are we missing something?</h4>
+        <p>We're still a long way off collecting every single show and every alumnus.</p>
+
+        <p>If you know of a show that isn't here please <a href="/collect/show">let us know!</a></p>
+
+        <p>If you're looking for yourself and we don't have a record of you, please <a href="/collect/person/">fill out the alumnni bio form</a>.</p>
+      </div>
+    </div>
+
+  </script>
+</div>

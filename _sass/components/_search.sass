@@ -1,0 +1,77 @@
+// Search
+
+.search-form
+  @include grid-wrap
+  @include block
+  position: relative
+  background: $color-grey-dark
+
+  padding-top: $baseline / 2
+  padding-bottom: $baseline / 2
+
+  font-size: 1.5rem
+  line-height: 1em
+
+  @include respond-up(tab-port)
+    padding-top: $baseline
+    padding-bottom: $baseline
+
+    font-size: 2rem
+
+  .search-form-inner
+    @include set-property-to-gutter(padding-right)
+
+    i
+      position: absolute
+      font-size: 1.2em
+      line-height: 1.6em
+
+    .search-q
+      width: 100%
+
+      font-size: 1em
+      padding: $baseline / 4
+      padding-left: 1.5em
+
+      background: none
+      color: $color-text-white
+
+      border: none
+      border-bottom: 1px solid $color-white
+      margin-bottom: 1px
+
+      &:focus
+        border-bottom-width: 2px
+        margin-bottom: 0px
+        outline: none
+
+.search-results
+  @include grid-wrap
+  @include grid-row
+
+.search-result
+  @include block
+  margin-bottom: $baseline * 2
+  clear: both
+  overflow: auto // Make nice spacing when image bottom is bottommost #107
+  .search-result-poster-thumb
+    float: left
+    padding-right: 14px
+  .search-result-show-title
+    margin-bottom: $baseline / 5
+  .meta
+    font-size: $base-font-size * 0.8
+    font-style: italic
+  .search-result-playwright
+    font-weight: $font-weight-light
+
+.search-results-empty
+  @include grid-x-col(10)
+.search-results-collect
+  @include grid-x-col(6)
+
+.search-loading
+  text-align: center
+  font-size: $base-font-size * 6
+
+  opacity: 0.1

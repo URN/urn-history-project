@@ -1,0 +1,19 @@
+---
+permalink: /humans.txt
+excerpt: ""
+---
+/* TEAM */
+  {% for person in site.data.humans %}{{ person.role }}: {{ person.name }}
+  Bio: {{ site.url }}/people/{{ person.bio }}/
+
+  {% endfor %}
+/* THANKS */
+  Nottingham New Theatre History Project
+
+/* SITE */
+  Last update: {{ site.time | date: "%Y-%m-%d" }}
+  Language: English
+  Doctype: HTML5
+  Build: Gulp, Jekyll, Travis CI
+  Test: htmltest, jsonlint
+  IDE: Sublime Text

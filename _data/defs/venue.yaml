@@ -1,0 +1,66 @@
+---
+- attr: title
+  type: string
+  short: Venue title
+  description: "Should match usage with shows, if using venue_sort will match that. Must also match filename."
+  required: true
+
+- attr: placeholder
+  type: boolean
+  short: Is this venue virtual / generated at runtime
+  generated: true
+
+- attr: links
+  type: array
+  short: A link list to official websites, social media, articles, etc.
+  description: "Uses [link list](/docs/link-list/) hashes. Should implement type, and href, can optionally use title. Common types are listed in [_data/link-types.yaml](https://github.com/urn/urn-history-project/blob/master/_data/link-types.yaml)."
+
+- attr: built
+  type: number
+  short: Year the venue was constructed
+  description: "YYYY"
+
+- attr: images
+  type: array
+  short: List of SmugMug image IDs of the venue
+  description: "Find IDs using [util/smug-venues](/util/smug-venues/)."
+
+- attr: smug_images
+  type: array
+  short: SmugImages for given images
+  generated: true
+
+- attr: location
+  type: hash
+  short: Exact location of the venue
+  description: "Hash with two keys: `lat` and `lon` as decimals. Used for map marker."
+
+- attr: place_type
+  type: string
+  short: Place
+  description: "Place where the venue is located."
+
+- attr: place_type_sort
+  type: string
+  short: Place grouping
+  description: "Used for mapping venues to listings on archive page."
+  generated: true
+
+- attr: sort
+  type: number
+  short: Allows manual sorting of venue listing
+
+- attr: shows
+  type: documentarray
+  short: List of shows performed in this venue
+  generated: true
+
+- attr: show_count
+  type: number
+  short: Number of shows performed in venue
+  description: Used as sort attribute
+  generated: true
+
+- attr: comment
+  short: Reserved for editor comments
+  description: "Displayed in editors’ mode."

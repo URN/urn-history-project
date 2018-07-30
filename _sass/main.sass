@@ -1,0 +1,160 @@
+@charset "utf-8"
+
+// Our variables
+$body-font-stack: 'Open Sans', Helvetica, sans-serif
+$header-font-stack: 'Montserrat', sans-serif
+$montserrat-letter-spacing: -0.7px
+$base-font-size: 17px
+$base-font-size-compact: $base-font-size * 0.875
+$baseline-multiplier: 1.6
+$baseline: $base-font-size * $baseline-multiplier
+$font-weight-bold: 600
+$font-weight-light: 300
+
+$color-urn-purple: #5e44cb
+$color-urn-orange: #e63d9b
+$color-brand-alt: #2D9189
+
+$color-black: #1c1c1c
+
+$color-text-white: #eee
+$color-text: $color-text-white
+$color-text-black: #111
+$color-text-accent: mix($color-urn-purple, $color-text-white)
+
+$color-white: #f1f1f1
+
+$color-background: darken($color-urn-purple, 40%)
+$color-background-alt: darken($color-urn-purple, 23%)
+
+$color-link: #FFC425
+$color-link-visited: darken($color-link, 07%)
+$color-link-bg-hover: darken($color-urn-purple, 20%)
+$color-focus: $color-text-white
+$color-decades-base: #601111
+
+$color-error: #601111
+$color-warning: #864116
+$color-success: #116019
+$color-info: #114560
+
+$color-grey: #828282
+$color-grey-light: lighten($color-grey, 40%)
+$color-grey-dark: darken($color-grey, 25%)
+
+$color-selection: $color-urn-orange
+
+$color-empty-poster: mix($color-black, $color-background, 90%)
+
+$color-venues: #4D8E13
+$color-show_types: #134466
+$color-playwright: #9F3B15
+
+$color-debug: #4FFF1F
+$color-debug-attr-base: #1e8c10
+$color-debug-attr-required: #E56818
+$color-debug-attr-generated: #0b5e92
+
+$element-transition: 0.34s ease-out
+
+$grid-transition-enable: false
+$grid-column-count: 16
+$grid-row-padding: $baseline
+$grid-column-start: "tab-port"
+$grid-column-end: "mob-land"
+
+$zindex-content-toolbar: 40
+$zindex-header: 50
+$zindex-footer: 50
+$zindex-sticky: 480
+$zindex-report-tab: 500
+$zindex-modal-bg: 990
+$zindex-search-overlay: 1000
+$zindex-modal: 1000
+$zindex-debug: 9000
+
+// Library imports
+
+@import "../lib/bourbon/app/assets/stylesheets/bourbon"
+@import "../lib/fgrid/fgrid"
+
+$fa-font-path: "/lib/font-awesome/fonts"
+@import "../lib/font-awesome/scss/font-awesome"
+
+$ionicons-font-path: "/lib/ionicons/fonts"
+@import "../lib/ionicons/scss/ionicons"
+
+// @import "bugfix/ionicons-mock"
+
+$octicons-font-path: "/lib/octicons/octicons/"
+@import "../lib/octicons/octicons/sprockets-octicons.scss"
+
+// $montserrat-font-path: "/lib/montserrat-webfont/fonts"
+// @import "../lib/montserrat-webfont/scss/montserrat-webfont"
+
+// $OpenSansPath: "/lib/open-sans-fontface/fonts"
+// @import "../lib/open-sans-fontface/sass/variables"
+// @import "../lib/open-sans-fontface/sass/mixins"
+// @import "../lib/open-sans-fontface/sass/Light"
+// // @import "../lib/open-sans-fontface/sass/LightItalic"
+// @import "../lib/open-sans-fontface/sass/Regular"
+// @import "../lib/open-sans-fontface/sass/Italic"
+// @import "../lib/open-sans-fontface/sass/Semibold"
+// // @import "../lib/open-sans-fontface/sass/SemiboldItalic"
+// // @import "../lib/open-sans-fontface/sass/Bold"
+// // @import "../lib/open-sans-fontface/sass/BoldItalic"
+// // @import "../lib/open-sans-fontface/sass/ExtraBold"
+// // @import "../lib/open-sans-fontface/sass/ExtraBoldItalic"
+
+@import "mixins"
+
+@import "debug"
+@import "type"
+@import "layout"
+@import "tables"
+
+@import "boxes"
+@import "breadcrumbs"
+@import "buttons"
+@import "flex"
+@import "forms"
+@import "logo"
+@import "mapbox"
+@import "meta-row"
+@import "people-grid"
+@import "person-list"
+@import "show_types"
+@import "sticky"
+@import "tables"
+
+@import "components/archives"
+@import "components/big-icon"
+@import "components/collect"
+@import "components/docs"
+@import "components/fellows"
+@import "components/footer"
+@import "components/github-issues-widget"
+@import "components/header"
+@import "components/home"
+@import "components/lazy-image"
+@import "components/lightbox"
+@import "components/link-list"
+@import "components/page"
+@import "components/page-not-found"
+@import "components/people-index"
+@import "components/person"
+@import "components/playwrights"
+@import "components/poster-bar"
+@import "components/homeimage"
+@import "components/report"
+@import "components/search"
+@import "components/show-list"
+@import "components/shows"
+@import "components/trivia-list"
+@import "components/turbolinks"
+@import "components/upload-box"
+@import "components/venues"
+@import "components/year-graph"
+@import "components/years"
+
+@import "shame"

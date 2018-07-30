@@ -1,0 +1,79 @@
+// Person list element
+
+.person-list
+  @include list-unformatted
+  $person-list-baseline: $baseline * 0.75
+
+  margin-bottom: 0
+
+  .person-single
+    margin-bottom: $baseline / 2
+    padding-bottom: $baseline / 2
+    border-bottom: 1px solid rgba($color-grey, 0.5)
+
+    position: relative
+
+    // Ensure container is exactly two lines high, at least
+    display: block
+    min-height: $person-list-baseline * 2 + $baseline / 2
+
+    i
+      position: absolute
+      top: 1px
+      right: 0
+      color: white
+      font-size: $base-font-size * 2.3
+      opacity: 0.1
+
+      // Fixed width icons, #102
+      width: 1.2em
+      text-align: center
+
+      // Fix weird alignment
+      &.ion-paintbucket
+        top: -5px
+
+  .person-headshot-container
+    height: $person-list-baseline * 2
+    width: $person-list-baseline * 2
+    float: left
+    margin-right: 10px
+    overflow: hidden
+
+  .person-headshot
+    // Allow relative positioning
+    position: relative
+    // Smooth JS adjustments to top
+    transition: top 1s ease-out
+
+    width: 100%
+    background: $color-urn-purple
+    opacity: 0.1
+
+  .person-headshot--placeholder
+    // Has a person file, no submission made though
+    opacity: 0.25
+
+  .person-headshot--submitted
+    background: $color-urn-orange
+    opacity: 0.75
+
+  .person-role, .person-name
+    line-height: $person-list-baseline
+
+  $person-role-weight: 100
+  .person-role
+    font-weight: $person-role-weight
+
+  a
+    display: block
+    color: $color-text-white
+
+    .person-role
+      font-weight: $person-role-weight
+    .person-name
+
+    @include no-underline(false)
+    &:hover
+      .person-name
+        text-decoration: underline // Only underline name

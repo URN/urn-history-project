@@ -1,0 +1,66 @@
+---
+- attr: type
+  type: string
+  short: Type of the resource
+  description: "Non-exhaustive common types are listed in [_data/link-types.yaml](https://github.com/urn/urn-history-project/blob/master/_data/link-types.yaml)."
+  required: true
+
+- attr: href
+  type: string
+  short: URL of the resource
+  description: "Should be wrapped in quotes."
+
+- attr: snapshot
+  type: string
+  short: Archive snapshot reference
+  description: "The five-character [archive.is](https://archive.is) snapshot reference. References are case-sensitive."
+
+- attr: href_snapshot
+  type: string
+  short: URL to archive snapshot
+  generated: true
+
+- attr: username
+  type: string
+  short: Username on a service.
+  description: "If `type` has an href attribute in [_data/link-types.yaml](https://github.com/urn/urn-history-project/blob/master/_data/link-types.yaml) you **must** use this field instead of `href`, otherwise omit."
+
+- attr: title
+  type: string
+  short: Title of resource
+  description: "Useful for headlines of news articles. Only include if suitable."
+
+- attr: icon
+  type: string
+  short: Icon class
+  description: Usually set by link type
+
+- attr: date
+  type: date
+  short: Date resource was published
+  description: "Useful for news articles. Formatted YYYY-MM-DD. Only include if suitable."
+
+- attr: publisher
+  type: String
+  short: Name of publisher
+  description: "Useful for news articles, required for reviews."
+
+- attr: rating
+  type: string
+  short: Rating (or stars) a review gave
+  description: "Only applies to reviews. Write as `x/of_y`, i.e `5/10`."
+
+- attr: quote
+  type: string
+  short: Short quote from resource
+  description: "Applicable for news stories or reviews. A short quotation summarising the resource."
+
+- attr: note 
+  type: string 
+  short: A visible note about the resource 
+  description: "Displayed as a title on the anchor."
+
+- attr: comment
+  type: string
+  short: Reserved for editor comments
+  description: "Displayed in editors’ mode."

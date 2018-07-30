@@ -1,0 +1,257 @@
+// Header
+
+.site-header
+  position: relative
+  z-index: $zindex-header
+
+  padding: $baseline/2 0 0 0
+  margin-bottom: $baseline
+  background: $color-background-alt
+
+  @include respond-up($grid-column-start)
+    padding: $baseline*2 0 $baseline 0
+
+  .wrapper
+    @include grid-wrap
+
+    // Flex container for title, nav and search
+    display: flex
+
+    // Remove left and right pad from header on mobile
+    @include respond-down(mob-land)
+      padding-left: 0
+      padding-right: 0
+      // Make vertical
+      flex-direction: column
+
+    @include respond-up($grid-column-start)
+      // Fix container overflow
+      padding-bottom: 2/3 * $baseline
+
+  &, a
+    color: $color-text-white
+
+.header-nobr .site-header, .home .site-header
+  margin-bottom: 0
+
+$nav-height-port: 60px
+$nav-height-land: 73px
+
+.site-title, .site-nav, .site-search
+  @include respond-up(tab-port)
+    line-height: $nav-height-port
+  @include respond-up(tab-land)
+    line-height: $nav-height-land
+
+.site-title
+  // Site logo
+  display: block
+  flex: 1
+
+  &:focus
+    .urn-logo
+      .urn-logo_big
+        fill: $color-urn-orange
+      .urn-logo_small
+        fill: $color-urn-purple
+
+  @include respond-up(tab-port)
+    // Prevent crush
+    min-width: 212px
+
+  @include respond-up(tab-land)
+    // Prevent crush
+    min-width: 272px
+
+  @include respond-down(mob-land)
+    width: 180px
+    margin: 0 auto
+    padding-bottom: $baseline / 2
+
+  @include no-underline
+
+.site-title .urn-logo, .site-title-logo
+  float: left
+  width: 32px
+  height: 32px
+  @include respond-up(tab-port)
+    width: 54px
+    height: 54px
+  @include respond-up(tab-land)
+    width: 64px
+    height: 64px
+
+$title-text-size: 25.4px
+$title-text-baseline: 1.2
+
+.site-title-text
+  padding-top: 2px
+  padding-left: 80px
+  font-size: $title-text-size
+  line-height: $title-text-size * $title-text-baseline
+  @include text-shadow-effect($color-background-alt)
+
+  .logo-line-turn
+    font-weight: normal
+    padding-top: 11px
+    font-family: $header-font-stack
+    font-size: $title-text-size / 1.95
+    line-height: ($title-text-size * $title-text-baseline) / 2
+    letter-spacing: -0.3px
+
+  .logo-line-hp
+    font-family: $header-font-stack
+    letter-spacing: $montserrat-letter-spacing
+
+    @include respond-down(mob-land)
+
+
+  @include respond-down(tab-port)
+    padding-left: 70px
+
+    $title-text-size-tab-port: $title-text-size * 0.7
+    font-size: $title-text-size-tab-port
+
+    .logo-line-turn
+      font-size: $title-text-size-tab-port / 2
+      line-height: ($title-text-size-tab-port * $title-text-baseline) / 2
+
+  @include respond-down(mob-land)
+    $title-text-size-mob-land: $title-text-size * 0.6
+    font-size: $title-text-size-mob-land
+
+    padding-left: 42px
+
+    .logo-line-turn
+      font-size: $title-text-size-mob-land / 2
+      padding-top: 0
+
+    .logo-line-hp
+      // Adjust line size from h2
+      line-height: 1.4em
+
+.site-nav
+  flex: 2
+
+  display: flex
+  text-align: center
+
+  @include respond-up(tab-port)
+    // Ensure we don't wrap, re #579
+    min-width: 465px
+    padding: 0 $baseline
+    justify-content: space-around
+
+  .page-link
+    @include no-underline
+
+    // Mobile nav Styling
+    @include respond-down(mob-land)
+      display: block
+      float: left
+      width: 25%
+      padding: $baseline / 2 0
+      text-align: center
+
+      i
+        display: block
+        font-size: 1.5rem
+        padding-bottom: 0.7rem
+
+      .page-link-text
+        display: block
+        line-height: 0.9em
+
+      &.current
+        background: darken($color-urn-purple, 10%)
+
+    // Desktop nav styling
+    @include respond-up(tab-port)
+      padding-bottom: 3px
+      &.current .page-link-text
+        // Purple underline for current section
+        border-bottom: 2px solid $color-urn-purple
+      &:hover .page-link-text
+        // White underline for hover
+        border-bottom: 2px solid $color-text-white
+
+.site-search-show
+  position: absolute
+  right: 0
+  top: 0
+
+  font-size: 1.4rem
+  padding: 0.1rem 1rem
+
+  @include respond-up(tab-port)
+    display: none
+
+.site-search
+  flex: 1
+  @include respond-down(mob-land)
+    // display: none // H
+    position: fixed
+    width: 100%
+    top: 0
+    left: 0
+
+    z-index: $zindex-search-overlay
+
+    transform: translateY(-4em)
+    transition: transform 0.3s ease-out
+
+    background: $color-white
+
+    i
+      color: $color-text-black
+      opacity: 0.5
+      font-size: 2rem
+      top: 0.15em
+      left: 0.25em
+
+  @include respond-up(tab-port)
+    position: relative
+    text-align: right
+
+    i
+      color: $color-text-white
+      font-size: 1.2rem
+      left: .5rem
+
+  &.elem-show
+    transform: translateY(0em)
+
+  i
+    position: absolute
+
+.search-bg
+  @extend .report-bg
+
+.site-search-input
+  color: $color-text-black
+  width: 100%
+
+  font-size: 1rem
+  padding: 1em
+  padding-left: 2.5em
+
+  border: none
+
+  &:placeholder
+    color: rgba($color-text-black, 0.3)
+
+  @include respond-up(tab-port)
+    padding: 6px
+    padding-left: 32px
+
+    border: 1px solid $color-urn-purple
+    color: $color-text-white
+    background: none
+
+    font-size: 0.9rem
+
+    &:placeholder
+      color: rgba($color-text-white, 0.25)
+
+.site-search-submit
+  display: none

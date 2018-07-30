@@ -1,0 +1,42 @@
+<header class="site-header" role="banner">
+
+  <div class="wrapper">
+    <a class="site-title" href="{{ site.baseurl }}/">
+      <img src="/images/logo.png" alt="The New Theatre logo, a purple square with a smaller orange square on its top left corner." class="site-title-logo" />
+      <!-- {% include svg/logo.html %} -->
+      <h2 class="site-title-text">
+        <div class="logo-line-turn">University Radio Nottingham</div>
+        <div class="logo-line-hp">History Project</div>
+      </h2>
+    </a>
+
+    <nav class="site-nav" role="navigation">
+      {% for node in site.data.header %}
+        <a class="page-link{% if node.slug == page.current %} current{% endif %}" href="{{ node.href | prepend: site.baseurl }}">
+          {% if node.icon %}<i class="{{ node.icon }}"></i> {% endif %}
+          <span class="page-link-text">{{ node.section }}</span>
+        </a>
+      {% endfor %}
+    </nav>
+
+    {% if page.url != "/search/" %}
+    <div id="site-search-show" class="site-search-show">
+      <i class="ion-search"></i>
+    </div>
+    {% endif %}
+
+    <div id="site-search" class="site-search" role="search">
+      {% if page.url != "/search/" %}
+      <form method="get" action="/search" data-search-form>
+        <label for="q" class="access-hidden">Search</label>
+        <i class="ion-search"></i>
+        <input type="search" name="q" id="q" placeholder="Search" data-search-input class="site-search-input" />
+        <input type="submit" value="Search" class="site-search-submit" />
+      </form>
+      {% endif %}
+    </div>
+
+    <div id="site-search-bg" class="elem-hidden modal-bg"></div>
+  </div>
+
+</header>

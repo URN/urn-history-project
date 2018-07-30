@@ -1,0 +1,130 @@
+// Site layout, sitewide stuff only
+
+*, *:before, *:after
+  margin: 0
+  padding: 0
+  -moz-box-sizing: border-box
+  -webkit-box-sizing: border-box
+  box-sizing: border-box
+
+html
+  overflow-y: scroll
+
+body
+  height: 100%
+
+body
+  background: $color-background
+
+.wrapper
+  @include grid-wrap
+
+.full-width
+  @include grid-x-col(16)
+
+.background-overlay
+  position: absolute
+  top: 0
+  width: 100%
+  height: 220px
+  background-image: linear-gradient($color-background-alt 0, transparent 99%)
+
+.site-content
+  min-height: 500px
+  margin-bottom: $baseline
+
+.content-nobr .site-content
+  margin-bottom: 0
+
+.lotsa-cols
+  // Quick and dirty cleanup for long lists
+  -webkit-column-count: 6
+  -webkit-column-gap: 20px
+
+.left
+  display: block
+  clear: both
+  float: left
+  margin: 0 $baseline $baseline 0
+
+.right
+  display: block
+  clear: both
+  float: right
+  margin: 0 $baseline 0 $baseline
+
+.page-photo
+  width: 30%
+  margin-top: $baseline
+  margin-bottom: $baseline
+
+.fade
+  opacity: 0.1
+
+.col-1-3
+  @include grid-x-percent(33.333%)
+.col-2-3
+  @include grid-x-percent(66.666%)
+
+.col-full
+  @include grid-x-percent(100%)
+
+
+.youtube
+  @include block
+  width: 100%
+  @include respond-up(tab-port)
+    height: 420px
+
+.access-hidden
+  // Hide elements present for accessibility reasons
+  position: absolute !important
+  height: 1px
+  width: 1px
+  overflow: hidden
+  clip: rect(1px 1px 1px 1px) /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px)
+
+.banner-header
+  @include grid-wrap
+  background: $color-grey
+  padding-top: $baseline * 3
+  padding-bottom: $baseline
+  margin-bottom: $baseline * 2
+
+  // Because .collect-header-icon
+  position: relative
+  overflow: hidden
+
+.banner-header-icon
+  position: absolute
+  bottom: -10rem
+  @include abs-right-wrap-pad(0px)
+  font-size: 23em
+  opacity: 0.3
+
+.elem-show
+  display: block
+
+.elem-hidden, .hidden
+  display: none
+
+.modal-bg
+  z-index: $zindex-modal-bg
+
+  position: fixed
+  top: 0
+  right: 0
+  background: #080808
+  opacity: 0.85
+  width: 100%
+  height: 100%
+
+#nthpMobileDetect
+  position: absolute
+  left: -999px
+  @include respond-up(tab-port)
+    display: none
+
+.noTransition
+  transition: none !important

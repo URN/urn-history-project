@@ -1,0 +1,121 @@
+---
+# This file defines the main roles a crew member can take along with representative icons.
+# See http://fontawesome.io/icons/ or http://ionicons.com/ for the icon names.
+
+# - role: Acting
+
+- role: Director
+  icon: ion-film-marker
+  aliases:
+    - Co-director
+    - Assistant Director
+    - Shadow Director 
+
+- role: Producer
+  icon: fa fa-money
+  aliases:
+    - Assistant Producer
+
+- role: Production Advisor 
+  icon: fa fa-comments-o
+  aliases:
+    - Improv Advisor
+
+- role: Set Designer
+  icon: ion-paintbucket
+  aliases:
+    - Shadow Set Designer 
+- role: Designer
+  icon: ion-paintbucket
+  aliases:
+    - Design Assistant
+
+- role: Stage Manager
+  icon: fa fa-bookmark
+- role: Technical Director
+  icon: fa fa-plug
+  aliases:
+    - Shadow Technical Director
+    - Tech Master 
+- role: Lighting Designer
+  icon: fa fa-lightbulb-o
+  aliases:
+    - Lighting Design
+    - Shadow Lighting Designer
+    - Shadow Lighting Design 
+- role: Sound Designer
+  icon: fa fa-volume-up
+  aliases:
+    - Sound Design
+    - Shadow Sound Designer
+- role: Video Designer
+  icon: ion-videocamera
+  aliases:
+    - Video Design
+- role: Technical Operator
+  icon: fa fa-headphones
+  aliases:
+    - Sound Operator
+- role: Sound Engineer
+  icon: ion-levels
+  aliases:
+    - Sound
+- role: Followspot Operator
+  icon: ion-aperture
+  aliases:
+    - Followspot
+
+- role: Composer
+  icon: fa fa-music
+  aliases:
+    - Original Score
+- role: Musical Director
+  icon: fa fa-music
+- role: Vocalist
+  icon: fa fa-music
+- role: Musician
+  icon: fa fa-music
+
+- role: Make Up Artist
+  icon: ion-paintbrush
+  aliases:
+    - Make Up
+    - Make-Up
+    - Hair & Make-Up
+- role: Costume Designer
+  icon: ion-tshirt
+  aliases:
+    - Costume Design
+    - Costumes 
+
+- role: Publicity Designer
+  icon: fa fa-picture-o
+- role: Publicity Manager
+  icon: fa fa-picture-o
+- role: Publicist
+  icon: fa fa-picture-o
+- role: Poster Designer
+  icon: fa fa-picture-o
+  aliases:
+    - Poster Design
+- role: Artwork
+  icon: fa fa-picture-o
+- role: Photographer
+  icon: fa fa-camera-retro
+  aliases:
+    - Photography
+
+- role: Set Construction
+  icon: ion-hammer
+
+- role: Choreographer
+  icon: fa fa-street-view
+  aliases:
+    - Choreography
+
+- role: President
+  icon: fa fa-star
+  show: false
+- role: Treasurer
+  icon: fa fa-money
+  show: false

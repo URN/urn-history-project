@@ -1,0 +1,45 @@
+<ul class="show-list">
+{% for show in show_list_shows %}
+
+<li class="show-list-single">
+  <div class="debug-abs-top-left" data-debug-toggle title="show_type_sort Number">{{ show.show_type_sort }}</div>
+  <a href="{{ show.url }}">
+
+    {% if show.poster %}
+      <div class="show-list-poster">
+        {% include images/show-poster-thumb.html 
+                   image=show.poster
+                   sizes="33px"
+                   alt=show.title %}
+      </div>
+    {% else %}
+      <div class="show-list-poster missing"></div>
+    {% endif %}
+
+    <span class="show-list-title">{{ show.title | escape_once }}</span>
+
+    {% if show.playwright %}
+    <span class="show-list-playwright show-list-playwright-{{ show.playwright.playwright_type }}">
+      {% if show.student_written %}
+        <i class="fa fa-pencil show-student-written" title="Student Written"></i>
+      {% endif %}
+      {{ show.playwright_formatted_long | escape_once }}
+    </span>
+    {% endif %}
+
+    <br />
+
+    <span class="show-list-show_type show_type-{{ show.show_type | downcase | replace:" ","-" }}">
+      {% if show.company %}{{ show.company | escape_once }}
+      {% else %}{{ show.show_type }}{% endif %}
+    </span>
+
+    {% if show.date_start %}<span class="show-list-date">{% include liquid/date_range.html %}</span>
+
+    {% else %}<span class="show-list-date">{{ show.year_page.title }}</span>{% endif %}
+
+  </a>
+</li>
+
+{% endfor %}
+</ul>

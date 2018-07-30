@@ -1,0 +1,29 @@
+// Year graph svg element _includes/svg/year-graph.html
+
+@mixin decade-col-fill($i, $color)
+  .decade-col-#{$i}
+    fill: $color
+  $hover-color: lighten($color, 5%)
+  .decade-col-#{$i}:hover
+    fill: $hover-color
+
+.year-graph-svg
+  @include respond-down(mob-land)
+    // Just don't bother on mobile
+    display: none
+
+  height: 200px
+  width: 100%
+
+  // Prevent seams and blurry edges
+  shape-rendering: crispEdges
+
+  // Colour generator for decade cols
+  $background-base: adjust-hue($color-decades-base, 220%)
+  $background-items: -3
+
+  @for $i from 194 through 201
+    $shift: (100% / $background-items) * (201-$i)
+    $shift-color: adjust-hue($background-base, $shift)
+
+    @include decade-col-fill($i, $shift-color)

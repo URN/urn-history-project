@@ -14,8 +14,7 @@ permalink: /collect/person/
     <div class="collect-row">
       <div class="collect-label">
         <h3>Your Details</h3>
-        <p>Name and year of graduation. We may contact you using your alumni membership contact details.</p>
-        <p>If you have not yet registered for the Alumni Network <a href="http://urn1350.net/alumni/registration/" target="_blank">please do so here</a>.</p>
+        <p>Name and year of graduation</p>
       </div>
       <div class="collect-field collect-flex-row">
         <input class="collect-text collect-field-name" type="text" name="name" required placeholder="Joe Bloggs" />
@@ -42,7 +41,7 @@ permalink: /collect/person/
         </p>
       </div>
       <div class="collect-field collect-flex-row">
-        <textarea class="collect-textarea" name="shows" placeholder="Benvolio - Romeo And Juliet, 4-8 October 1999"></textarea>
+        <textarea class="collect-textarea" name="shows" placeholder="Presenter - The Pulse, 4 October 1999 - 12 January 2000"></textarea>
         <ul class="collect-person-data collect-hidden" data-have-details-show data-have-details-style>
           <li data-have-details-shows-hide>No shows found</li>
         </ul>
@@ -58,8 +57,8 @@ permalink: /collect/person/
         </p>
       </div>
       <div class="collect-field collect-flex-row">
-        <textarea class="collect-textarea" name="committees" placeholder="Workshop Manager - 2000-2001
-President - 2001-2002"></textarea>
+        <textarea class="collect-textarea" name="committees" placeholder="Technical Manager - 2000-2001
+Head of Daytime Programing - 2001-2002"></textarea>
         <ul class="collect-person-data collect-hidden" data-have-details-show data-have-details-style>
           <li data-have-details-committees-hide>No committee roles found</li>
         </ul>
@@ -68,12 +67,12 @@ President - 2001-2002"></textarea>
 
     <div class="collect-row collect-row-continue">
       <div class="collect-label">
-        <h3>Your time at the theatre</h3>
-        <p>Pick a few fond memories or stories of your involvement with the theatre.</p>
+        <h3>Your time at the station</h3>
+        <p>Pick a few fond memories or stories of your involvement with the station.</p>
         <p class="aside">Around 80 words per story would be ideal, but any stories are welcome.</p>
       </div>
       <div class="collect-field">
-        <textarea class="collect-textarea collect-field-bio1" name="bio1" placeholder="Once, Joe Bloggs decided it would be fun to crawl from the tech box to the stage"></textarea>
+        <textarea class="collect-textarea collect-field-bio1" name="bio1" placeholder="Once, Joe Bloggs decided it would be fun to do a whole show with no music."></textarea>
       </div>
     </div>
 
@@ -84,11 +83,11 @@ President - 2001-2002"></textarea>
         <p class="aside">Around 40 words would be ideal.</p>
       </div>
       <div class="collect-field ">
-        <textarea class="collect-textarea collect-field-bio2" name="bio2" placeholder="Further studies, drama school, careers, achivements."></textarea>
+        <textarea class="collect-textarea collect-field-bio2" name="bio2" placeholder="Further studies, presenting on radio, achivements."></textarea>
       </div>
     </div>
 
-    <div class="collect-row">
+    <!-- <div class="collect-row">
       <div class="collect-label">
         <p>Have you gone into theatre since graduating? Please tick significant areas you've worked in.</p>
         <p>If you've gone down another career path enter titles in the box below.</p>
@@ -106,22 +105,22 @@ President - 2001-2002"></textarea>
         </ul>
         <input type="text" class="collect-text career-other" name="career-other" placeholder="Anything not listed above" />
       </div>
-    </div>
+    </div> -->
 
     <div class="collect-row">
       <div class="collect-label">
         <h3>Awards</h3>
-        <p>Did you or a show you were involved with gain awards from the theatre or external bodies?</p>
+        <p>Did you or a show you were involved with gain awards from the station or external bodies?</p>
       </div>
       <div class="collect-field">
-        <textarea class="collect-textarea" name="awards" placeholder="The Pride, won flashiest bulbs award. Was invited to be part of NSDF technical team."></textarea>
+        <textarea class="collect-textarea" name="awards" placeholder="The Pulse, won best journalist award at the Student Radio Awards. I also received lifetime mebership of the station."></textarea>
       </div>
     </div>
 
     <div class="collect-row">
       <div class="collect-label">
         <h3>Links</h3>
-        <p>Please include links to personal websites, Twitter / LinkedIn accounts, Spotlight or other profiles <i>e.t.c.</i></p>
+        <p>Please include links to personal websites, Twitter / LinkedIn accounts or other profiles <i>e.t.c.</i></p>
       </div>
       <div class="collect-field">
         <textarea class="collect-textarea" name="links" placeholder="Twitter, @JoeBloggs."></textarea>
@@ -131,7 +130,7 @@ President - 2001-2002"></textarea>
     <div class="collect-row">
       <div class="collect-label">
         <h3>Contact preferences</h3>
-        <p>We would like to allow current students and recent graduates to get in contact with alumni in the industry. All contact would be handled through the network co-ordinators, your details will not be made public.</p>
+        <p>We would like to allow current students and recent graduates to get in contact with alumni in the industry. Your details will not be made public.</p>
       </div>
       <div class="collect-field">
         <ul class="collect-checkboxes">
@@ -163,4 +162,3 @@ President - 2001-2002"></textarea>
   <span class="item-roles"><% _.each(item.roles, function(role){ %><%= role %><br /><% }) %></span>
 </li>
 </script>
-

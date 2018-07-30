@@ -129,7 +129,7 @@ module Jekyll
       'After Dark',
       'Culture',
       'Daytime',
-      # 'News',
+      'News',
       'Sport',
     ]
 

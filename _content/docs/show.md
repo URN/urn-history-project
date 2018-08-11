@@ -21,7 +21,7 @@ title: The Game Show
 show_type: Daytime
 show_type_sort: 70
 period: Autumn
-venue: Portland Basement
+venue: Portland A Floor
 date_start: 2016-10-12
 date_end: 2016-12-15
 

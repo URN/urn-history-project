@@ -3,6 +3,8 @@ title: Year in Review
 period: Year Long
 show_type: After Dark
 venue: Portland A Floor
+date_start: 2017-09-25
+date_end: 2018-06-16
 
 cast:
  - role: Presenter

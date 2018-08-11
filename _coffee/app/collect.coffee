@@ -16,7 +16,6 @@ collectBindEvents = ->
 Field | Data
 ----- | ----
 Title | #{form_dict['title']}
-Playwright | #{form_dict['playwright']}
 Date Start | #{form_dict['date_start_day']} / #{form_dict['date_start_month']} / #{form_dict['date_start_year']}
 Date End | #{form_dict['date_end_day']} / #{form_dict['date_end_month']} / #{form_dict['date_end_year']}
 Type | #{form_dict['type']}
@@ -26,7 +25,7 @@ Venue | #{form_dict['venue']}
 
 #{form_dict['synopsis']}
 
-## Cast
+## Presenters
 
 #{form_dict['cast']}
 
@@ -50,7 +49,6 @@ Graduated | #{form_dict['graduation']}
 ```
 ---
 title: #{form_dict['title']}
-playwright: #{form_dict['playwright']}
 show_type: ??? (#{form_dict['type']})
 show_type_sort: ??
 period: ??
@@ -129,7 +127,7 @@ Name | #{form_dict['name']}
 Grad Year | #{form_dict['graduation']}
 Course | #{form_dict['course']}
 
-## Bio1 (Time at theatre)
+## Bio1 (Time at station)
 
 #{form_dict['bio1']}
 

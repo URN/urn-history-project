@@ -40,7 +40,6 @@ exclude:
 - LICENCE
 - Gemfile
 - Gemfile.lock
-- googlee5aee69e17917677.html
 - gulpfile.js
 - images/
 - lib/
@@ -57,7 +56,6 @@ exclude:
 # Don't clean these in _site, we use gulp to generate them
 keep_files:
 - css
-- googlee5aee69e17917677.html
 - images
 - js
 - lib
@@ -224,7 +222,7 @@ image:
 
 # Config for the prose editor
 prose:
-  ignore: ['_bin', '_utilities', 'CNAME', '.gitignore', 'js', 'css', '_site', '_sass', '_layouts', '_includes', '.travis.yml', 'Gemfile', 'Gemfile.lock', 'lib', 'js', '_plugins', 'feeds', '_years', '.bowerrc', '.gitmodules', '_config.yml', 'bower.json', 'googlee5aee69e17917677.html', 'package.json', 'robots.txt']
+  ignore: ['_bin', '_utilities', 'CNAME', '.gitignore', 'js', 'css', '_site', '_sass', '_layouts', '_includes', '.travis.yml', 'Gemfile', 'Gemfile.lock', 'lib', 'js', '_plugins', 'feeds', '_years', '.bowerrc', '.gitmodules', '_config.yml', 'bower.json', 'package.json', 'robots.txt']
   siteurl: "https://history.urn1350.net"
   media: "images"
   metadata:

@@ -33,7 +33,6 @@ console.log("");
 // Prevents both items from presence on sitemap.
 
 const LATE_FILES_ROOT = [
-    'googlee5aee69e17917677.html',
     'manifest.json'
 ];
 
@@ -280,4 +279,3 @@ gulp.task('build_deploy', [
 
 // Run test suite
 gulp.task('test', ['htmltest', 'jsonlint']);
-

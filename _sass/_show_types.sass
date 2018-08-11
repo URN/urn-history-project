@@ -1,11 +1,10 @@
 // Colours for show_type periods
 
-$color-in-house: lighten($color-background, 10%)
-$color-fringe: darken($color-urn-orange, 10%)
-$color-edinburgh: #3CD861
-$color-lakeside: #4AAEDB
-$color-stuff: #E20013
-$color-fundraiser: darken(#E296D1, 30%)
+$color-after-dark: #3b4251
+$color-culture: #ed6346
+$color-daytime: #e50052
+$color-news: #009994
+$color-sport: #009fe3
 
 @mixin show-show_type-circle
   &:before
@@ -26,44 +25,39 @@ $color-fundraiser: darken(#E296D1, 30%)
 
 // Circles in show_list.html
 .show-list-show_type, .person-show-show_type, .show_type-icon
-  &.show_type-in-house:before
-    color: $color-in-house !important
-  &.show_type-fringe:before, &.show_type-uncut:before
-    color: $color-fringe !important
-  &.show_type-edinburgh:before, &.show_type-previews:before
-    color: $color-edinburgh !important
-  &.show_type-lakeside:before
-    color: $color-lakeside !important
-  &.show_type-stuff:before
-    color: $color-stuff !important
-  &.show_type-fundraiser:before
-    color: $color-fundraiser !important
+  &.show_type-after-dark:before
+    color: $color-after-dark !important
+  &.show_type-culture:before, &.show_type-uncut:before
+    color: $color-culture !important
+  &.show_type-daytime:before, &.show_type-previews:before
+    color: $color-daytime !important
+  &.show_type-news:before
+    color: $color-news !important
+  &.show_type-sport:before
+    color: $color-sport !important
 
 // Background of show_type meta-col col
 .show-show_type
   $opacity-jigging: 0.8
-  .show_type-in-house
-    background: rgba($color-in-house, $opacity-jigging)
-  .show_type-fringe, .show_type-uncut
-    background: rgba($color-fringe, $opacity-jigging)
-  .show_type-edinburgh, .show_type-previews
-    background: rgba($color-edinburgh, $opacity-jigging)
-  .show_type-lakeside
-    background: rgba($color-lakeside, $opacity-jigging)
-  .show_type-stuff
-    background: rgba($color-stuff, $opacity-jigging)
-  .show_type-fundraiser
-    background: rgba($color-fundraiser, $opacity-jigging)
+  .show_type-after-dark
+    background: rgba($color-after-dark, $opacity-jigging)
+  .show_type-culture, .show_type-uncut
+    background: rgba($color-culture, $opacity-jigging)
+  .show_type-daytime, .show_type-previews
+    background: rgba($color-daytime, $opacity-jigging)
+  .show_type-news
+    background: rgba($color-news, $opacity-jigging)
+  .show_type-sport
+    background: rgba($color-sport, $opacity-jigging)
 
 // Breadcrumbs
-@include breadcrumb-color("in-house", $color-in-house)
-@include breadcrumb-color("fringe", darken($color-fringe, 20%))
-@include breadcrumb-color("uncut", darken($color-fringe, 20%))
-@include breadcrumb-color("edinburgh", darken($color-edinburgh, 30%))
-@include breadcrumb-color("previews", darken($color-edinburgh, 30%))
-@include breadcrumb-color("lakeside", darken($color-lakeside, 10%))
-@include breadcrumb-color("stuff", $color-stuff)
-@include breadcrumb-color("fundraiser", $color-fundraiser)
+@include breadcrumb-color("after-dark", $color-after-dark)
+@include breadcrumb-color("culture", darken($color-culture, 20%))
+@include breadcrumb-color("uncut", darken($color-culture, 20%))
+@include breadcrumb-color("daytime", darken($color-daytime, 30%))
+@include breadcrumb-color("previews", darken($color-daytime, 30%))
+@include breadcrumb-color("news", darken($color-news, 10%))
+@include breadcrumb-color("sport", $color-sport)
 
 // Show_type pages
 @include breadcrumb-color("show_types", $color-show_types)

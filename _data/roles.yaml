@@ -9,14 +9,14 @@
   aliases:
     - Co-director
     - Assistant Director
-    - Shadow Director 
+    - Shadow Director
 
 - role: Producer
   icon: fa fa-money
   aliases:
     - Assistant Producer
 
-- role: Production Advisor 
+- role: Production Advisor
   icon: fa fa-comments-o
   aliases:
     - Improv Advisor
@@ -24,7 +24,7 @@
 - role: Set Designer
   icon: ion-paintbucket
   aliases:
-    - Shadow Set Designer 
+    - Shadow Set Designer
 - role: Designer
   icon: ion-paintbucket
   aliases:
@@ -36,13 +36,13 @@
   icon: fa fa-plug
   aliases:
     - Shadow Technical Director
-    - Tech Master 
+    - Tech Master
 - role: Lighting Designer
   icon: fa fa-lightbulb-o
   aliases:
     - Lighting Design
     - Shadow Lighting Designer
-    - Shadow Lighting Design 
+    - Shadow Lighting Design
 - role: Sound Designer
   icon: fa fa-volume-up
   aliases:
@@ -86,7 +86,7 @@
   icon: ion-tshirt
   aliases:
     - Costume Design
-    - Costumes 
+    - Costumes
 
 - role: Publicity Designer
   icon: fa fa-picture-o
@@ -113,9 +113,50 @@
   aliases:
     - Choreography
 
-- role: President
+- role: Station Editor
   icon: fa fa-star
   show: false
-- role: Treasurer
+
+- role: Deputy Station Editor
+  icon: fa fa-star
+  show: false
+
+- role: Head of Finance and Sales
   icon: fa fa-money
+  aliases:
+    - Head of Promotion and Finance
+  show: false
+
+- role: Head of Speech Based Programming
+  icon: fa fa-comments
+  show: false
+
+- role: Head of Specialist Music Programming
+  icon: fa fa-headphones
+  show: false
+
+- role: News Editor
+  icon: fa fa-newspaper-o
+  show: false
+
+- role: Sports Editor
+  icon: fa fa-futbol-o
+  show: false
+
+- role: Playlist Editor
+  icon: fa fa-music
+  show: false
+
+- role: Technical Manager
+  icon: fa fa-wrench
+  show: false
+
+- role: Head of Station Sound and Imaging
+  icon: fa fa-microphone
+  aliases:
+    - Head of Audio Production
+  show: false
+
+- role: Head of Welfare
+  icon: fa fa-heart
   show: false

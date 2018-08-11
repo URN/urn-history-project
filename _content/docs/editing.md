@@ -81,7 +81,7 @@ These are used mainly to populate the cast and crew lists for shows. Check out t
 
 ### Venues [<i class="octicon octicon-book"></i>](https://history.urn1350.net/docs/venue/)
 
-As well as the New Theatre, we've taken shows all over the country, most frequently to the Edinburgh Festival Fringe. Each venue has its own page where the shows at that venue are listed. We want to know all about these venues, so information can be added in these content pages.
+Over the years we've had a few different studios, as well as countless Outside Broadcasts. Venues is all about keeping track of the different places we've broadcast from.
 
 ### Link Lists [<i class="octicon octicon-book"></i>](https://history.urn1350.net/docs/link-list/)
 

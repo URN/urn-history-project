@@ -153,7 +153,7 @@ body_class: layout-person header-nobr content-nobr
     {% for record in person.shows %}
     <div class="person-show">
       <a href="{{ record.item.url }}" title="{{ record.item.title | escape_once }}">
-        <div class="person-show-poster">
+        <!-- <div class="person-show-poster">
           {% if record.item.poster %}
             {% include images/show-poster-thumb.html
                        image=record.item.poster
@@ -161,9 +161,9 @@ body_class: layout-person header-nobr content-nobr
                        alt=record.item.title
                        lazy=true %}
           {% else %}
-            <!-- Missing Poster -->
+            Missing Poster
           {% endif %}
-        </div>
+        </div> -->
 
         <h3 class="person-show-title">
           {{ record.item.title | escape_once }}

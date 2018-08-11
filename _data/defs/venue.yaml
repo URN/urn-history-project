@@ -38,7 +38,7 @@
 - attr: place_type
   type: string
   short: Place
-  description: "Place where the venue is located."
+  description: "Type of venue, either Studios or Outside Broadcasts"
 
 - attr: place_type_sort
   type: string

@@ -4,6 +4,7 @@ group: docs
 title: Photos and Assets
 order: 100
 redirect_from: /docs/photos_and_assets/index.html
+published: false
 ---
 
 Show records currently have a *'Publicity Materials'* and *'Production Shots'* section. All images are stored in the [New Theatre SmugMug](https://photos.urn1350.net), other binaries are stored in the repo's `assets/for_shows/` folder.
@@ -28,4 +29,3 @@ assets:
     filename: the_pillowman_programme.pdf
     title: Programme
 {% endhighlight %}
-

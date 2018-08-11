@@ -17,48 +17,23 @@ The show records are stored as `_shows/YY_YY/show_name.md` with YY_YY being the 
 
 {% highlight yaml %}
 ---
-title: The Pillowman
-playwright: Martin McDonagh
-show_type: In House
+title: The Game Show
+show_type: Daytime
 show_type_sort: 70
 period: Autumn
-venue: New Theatre
-date_start: 2012-12-12
-date_end: 2012-12-15
+venue: Portland Basement
+date_start: 2016-10-12
+date_end: 2016-12-15
 
 canonical:
 - title: The Pillowman
-  playwright: Martin McDonagh
 
 cast:
-  - role: Katurian
-    name: Sam Haywood
-  - role: Ariel
-    name: Will Randall
-crew:
-  - role: Director
-    name: James McAndrew
   - role: Producer
-    name: Nick Stevenson
-
-prod_shots: abcd123
-
-assets:
-  - type: poster
-    image: XJZCPfW
-  - type: flyer
-    image: XKsW92t
-  - type: programme
-    filename: the_pillowman_programme.pdf
-    title: Programme
-
-tour:
-  - venue: The National
-    date_start: 2013-01-01
-    date_end: 2013-01-03
-    notes: Show won award
+    name: John Smith
+  - role: Presenter
+    name: Joe Doe
 ---
 
-In an unnamed police state, a writer has been arrested because the content of his stories bares a striking resemblance to a series of gruesome child murders. Interrogated by two brutal detectives, he claims to know nothing of such murders. But also in their custody is his younger, brain damaged brother, who perhaps knows more than he first lets on. A darkly comic thriller like no other.
+On a Tuesday afternoon be brought into a land of digital wonder as all things gaming are disscused on the show, everything from Mass Effect to F1 to Undertale. Join John and Joe as they regail you with there thoughts of upcoming games and give up to date news of what's going down in the gaming industry.
 {% endhighlight %}
-

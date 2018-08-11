@@ -26,16 +26,6 @@
   short: Decade identifier for the decade this show belongs to
   generated: true
 
-- attr: fellows
-  type: documentarray
-  short: List of this years fellows
-  generated: true
-
-- attr: commendations
-  type: documentarray
-  short: List of this years commendations
-  generated: true
-
 - attr: committee
   type: document
   short: This years committee

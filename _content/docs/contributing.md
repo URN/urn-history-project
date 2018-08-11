@@ -22,13 +22,13 @@ If you're new to Git and GitHub, there are a [wealth of resources][gh-resources]
 
 ## <i class="fa fa-envelope"></i> Collecting Information
 
-We've only collected a subset of all the shows the New Theatre has put on over the years. We need people to reach out to the alumni community and gather both memories of past shows and events and physical media from the time.
+We've only collected a subset of all the shows the station has done over the years. We need people to reach out to the alumni community and gather both memories of past shows and events and physical media from the time.
 
 If you fancy helping out, let one of the editors know by sending us an email at <history@urn1350.net>.
 
 ## <i class="octicon octicon-issue-closed"></i> Issues
 
-![Listing of issues](/images/docs/gh-issues.png)
+<!-- ![Listing of issues](/images/docs/gh-issues.png) -->
 
 We use numbered _issues_ to track both technical and editorial work that needs doing. The listing of [open issues][gh-issues] is public and can be found in our GitHub repository. Each issue can be a quick to-do list item, which is quickly ticked off, or a hub for discussion over a complex task.
 
@@ -48,7 +48,7 @@ The process of getting a change committed and a pull request opened may seem dau
 
 #### Forking and branching
 
-Firstly you'll need to create your own _fork_ of the respository on which to work. This is your own version so you can make your changes without worrying about affecting the main site. 
+Firstly you'll need to create your own _fork_ of the respository on which to work. This is your own version so you can make your changes without worrying about affecting the main site.
 
 Head over to the [repository][gh-repo] and hit the _<i class="octicon octicon-repo-forked"></i> Fork_ button at the top-right. You'll need to [create a free GitHub account](https://github.com/join/) if you don't have one already. Now you're ready to start editing!
 
@@ -64,8 +64,8 @@ Head over to the [repository][gh-repo] and hit the _<i class="octicon octicon-re
 This method requires a certain amount of technical knowledge but is a lot more flexible. It uses Git on the command line, and there are additional guides for [getting started](https://git-scm.com/doc) there.
 {: .box-info}
 
-1. Fork the project by clicking "Fork" in the top right corner of [newtheatre/history-project](https://github.com/urn/urn-history-project).
-2. Clone the repository locally `git clone https://github.com/<your-username>/history-project`.
+1. Fork the project by clicking "Fork" in the top right corner of [urn/urn-history-project](https://github.com/urn/urn-history-project).
+2. Clone the repository locally `git clone https://github.com/<your-username>/urn-history-project`.
 3. Create a new, descriptively named branch to contain your change `git checkout -b my-awesome-change`.
 4. Using your preferred text editor, make your changes. See the Editors' Guide for more detailed information on this and the text editors we use.
 
@@ -73,9 +73,9 @@ This method requires a certain amount of technical knowledge but is a lot more f
 
 The command line isn't for everyone, and that's why other bits of software exist. We've tried [Gitkraken](http://gitkraken.com) and [GitHub Desktop](https://desktop.github.com/), and the Git website has a [full list of options][git-guis].
 
-The concept is exactly the same as above: clone, branch and commit. 
+The concept is exactly the same as above: clone, branch and commit.
 
-#### Building the site locally 
+#### Building the site locally
 
 By editing on your computer, you can run the entire site and preview changes before pushing them to GitHub. You should have a good knowledge of Git and the command line before doing this.
 
@@ -144,7 +144,7 @@ Using one of the other software-based options have a very similar process to the
 #### Submitting a pull request via Git command line
 
 5. Push the branch up (`git push origin my-awesome-change`).
-6. Create a pull request by visiting `https://github.com/<your-username>/history-project` and following the instructions at the top of the screen.
+6. Create a pull request by visiting `https://github.com/<your-username>/urn-history-project` and following the instructions at the top of the screen.
 
 ### <i class="octicon octicon-beaker"></i> Testing Pull Requests
 
@@ -152,15 +152,15 @@ There are a number of ways to review an editor's pull request, and this can depe
 
 You can also make sure the code runs effectively by running it on your own computer by building it, or viewing the edited pages in the test environment. A link to this test environment will be on the pull request page, once it's built successfully.
 
-### <i class="octicon octicon-verified"></i> Becoming a Contributor 
+### <i class="octicon octicon-verified"></i> Becoming a Contributor
 
-If you decide making these kinds of edits and contributions is for you, we'd love to have you as part of [the team](https://github.com/orgs/newtheatre/people)! We're all volunteers here, and once you've had a few pull requests merged you'll be able to join the list of contributors. This means you won't have to make your own forks, and can edit the finer details of issues and pull requests.
+If you decide making these kinds of edits and contributions is for you, we'd love to have you as part of [the team](https://github.com/orgs/urn/people)! We're all volunteers here, and once you've had a few pull requests merged you'll be able to join the list of contributors. This means you won't have to make your own forks, and can edit the finer details of issues and pull requests.
 
 ## <i class="octicon octicon-question"></i> Anything else
 
 See the other pages here for more detailed information about each section of the site.
 
-If you get stuck, or want to help out another way, send us an email at <history@urn1350.net> or get in touch with any of the [editors](https://github.com/orgs/newtheatre/people).
+If you get stuck, or want to help out another way, send us an email at <history@urn1350.net> or get in touch with any of the [editors](https://github.com/orgs/urn/people).
 
 
 [gh-repo]: https://github.com/urn/urn-history-project

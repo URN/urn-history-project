@@ -19,7 +19,6 @@ Biographies of theatre alumni are stored as `_people/firstname_lastname.md`.
 ---
 title: John Smith
 gender: male
-headshot: ABC123
 course: BEng Mechanical Engineering
 graduated: 2010
 careers:
@@ -42,7 +41,6 @@ John did techie stuff
 ---
 title: Alice Smith
 gender: female
-headshot: ABC124
 course:
   - Creative Writing BA
   - English MA

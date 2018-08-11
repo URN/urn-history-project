@@ -5,56 +5,10 @@
   description: "Displayed at the top of the show page and on various other pages. Should be the title of this performance, may not quite match the title of the play – see `canonical`."
   required: true
 
-- attr: playwright
-  type: string
-  short: Full name of the playwright
-  description: "Omit if using devised, set to `various` if compilation."
-
-- attr: devised
-  short: Used if play was devised
-  description: "Either `true` for generic output or a descriptor. Example descriptor: `Cast and Crew` will output “Devised by Cast and Crew”. Omit if using playwright."
-
-- attr: adaptor
-  type: string
-  short: Full name of adaptor
-  description: "Outputs as “Adapted by adaptor”."
-
-- attr: translator
-  type: string
-  short: Full name of the translator
-  description: "Outputs as “Translated by translator”."
-
-- attr: playwright_type
-  type: string
-  short: Playwright type
-  description: Either `playwright`, `devised`, `various`, or `unknown`.
-  generated: true
-
-- attr: playwright_formatted
-  type: string
-  short: Short form formatted playwright string
-  description: Excludes adaptor and other additional details.
-  generated: true
-
-- attr: playwright_formatted_long
-  type: string
-  short: Long form formatted playwright string
-  description: Includes adaptor and othe additional details.
-  generated: true
-
 - attr: canonical
   # type: not defined yet
-  short: List of canonical titles and playwrights for reverse lookup.
-  description: "Specify titles and/or playwrights in a list. See [#486](https://github.com/urn/urn-history-project/issues/486)."
-
-- attr: student_written
-  type: boolean
-  short: Show written by a NNT member
-  description: "Set to `true`; `false` or line missing are equivalent."
-
-- attr: company
-  type: string
-  short: Non-NNT only, the name of the company
+  short: List of canonical titles for reverse lookup.
+  description: "Specify titles in a list. See [#486](https://github.com/newtheatre/history-project/issues/486)."
 
 - attr: period
   type: string
@@ -63,7 +17,7 @@
 - attr: show_type
   type: string
   short: Show_type show belongs to
-  description: "Choices: `Autumn`, `Spring` or `Year Long`."
+  description: "Choices: `After Dark`, `Culture`, `Daytime`, `News` or `Sport`."
   required: true
 
 - attr: show_type_path
@@ -75,7 +29,7 @@
 - attr: show_type_sort
   type: number
   short: Order which this show comes in the entire year
-  description: "Use multiples of 10 for ease of additions.\nRoughly: Autumn should start at 30, Spring 200 and Edinburgh 400. Shows then fall at 30, 40, 50 *&c*"
+  description: "Use multiples of 10 for ease of additions."
   required: true
 
 - attr: ignore_missing
@@ -144,11 +98,6 @@
   type: date
   short: Date of last performance
   description: "In the format YYYY-MM-DD, omit if show only ran one day."
-
-- attr: tour
-  type: array
-  short: List of tours the show has been on (NSDF &c).
-  description: "Specify venue, date_start, date_end and notes. See [#12](https://github.com/urn/urn-history-project/issues/12). Shows taken to Edinburgh should have a separate show created under the Edinburgh period."
 
 - attr: excerpt
   type: string

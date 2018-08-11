@@ -20,12 +20,12 @@ Committee listings are stored as `_committees/YY_YY.md` with YY_YY being the aca
 title: 2012-13
 
 committee:
-  - role: President
-    name: Sam Hayward
+  - role: Station Manager
+    name: John Smith
   - role: Treasurer
-    name: Nick Stevenson
-  - role: Theatre Manager
-    name: James Bentley
+    name: Jack Doe
+  - role: Technical Manager
+    name: Lucy Call
 
 comment: "Pretty sure there were more members!"
 ---

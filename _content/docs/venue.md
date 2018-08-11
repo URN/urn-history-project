@@ -19,8 +19,6 @@ Venue data is stored as `_venues/venue-name.md`. The content is the venue descri
 ---
 title: Lincoln Library
 built: 1962
-images:
-  - 5rTvvrw
 location:
   lat: 52.9419
   lon: -1.1995
@@ -28,7 +26,7 @@ links:
 	- type: default
 		title: Lincoln Hall Website
 		href: http://www.nottinghamconferences.co.uk/lincoln-hall/
-	- type: Twitter 
+	- type: Twitter
 		title: @LincolnLibrary
 		username: LincolnLibrary
 ---

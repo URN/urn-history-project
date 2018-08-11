@@ -56,9 +56,9 @@
   generated: true
 
 - attr: student
-  type: boolean 
+  type: boolean
   short: Whether a person is a student or not (do they have a show, or a committee, and they are not estimated graduated)
-  generated: true 
+  generated: true
 
 - attr: decade
   type: number
@@ -67,13 +67,13 @@
 
 - attr: award
   type: string
-  short: Award person recieved on leaving the theatre
+  short: Award person recieved on leaving the station
   description: "Should be in title case, Fellowship, Commendation. If not applicable line should be omitted."
 
 - attr: careers
   type: array
-  short: List of careers, theatre or non-theatre related
-  description: "Recognised theatre careers are listed in [_data/careers.yaml](https://github.com/urn/urn-history-project/blob/master/_data/careers.yaml)."
+  short: List of careers, radio or non-radio related
+  description: "Recognised radio careers are listed in [_data/careers.yaml](https://github.com/urn/urn-history-project/blob/master/_data/careers.yaml)."
 
 - attr: links
   type: array

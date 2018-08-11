@@ -12,7 +12,7 @@ permalink: /about/
 
 This site aims to piece together University Radio Nottingham's varied history from each studio we've broadcast from.
 
-It's still very early days here and we're still looking to fill in recent years! We're ahppy to take any information you want to give, this is all about keeping a record of everything that happened at the station.
+It's still very early days here and we're still looking to fill in recent years! We're happy to take any information you want to give, this is all about keeping a record of everything that happened at the station.
 
 Huge thanks goes to The Nottingham New Theatre and there own [history project](https://history.newtheatre.org.uk) on which ours is heavily inspired by both in spirit and from a technical point of view. The years of work their dedicated team has done allowed us to quickly fast track the development of our own project. This site is a modified version of their own, the code for which can be found over on [GitHub](https://github.com/urn/urn-history-project).
 
@@ -40,13 +40,11 @@ See the [contributing](/contributing/) section for details on how to help out.
 {% assign people = site.people %}
 
 - Site last updated at {{site.time | date: "%Y-%m-%d %H:%M" }}
-- Build number {% include travis_build_number.txt %}.
+<!-- - Build number {% include travis_build_number.txt %}. -->
 - {{shows.size}} shows, {{committees.size}} committees and {{people.size}} people.
 
 ## Special Thanks
 
-- Browser testing tools generously provided by [BrowserStack](https://www.browserstack.com/).
-- Mapping © <a href='https://www.mapbox.com/about/maps/'>Mapbox</a> © <a href='http://www.openstreetmap.org/copyright'>OpenStreetMap</a>
 - Once again the [Nottingham New Theatre](http://newtheatre.org.uk/) whose years of work allowed us to quickly fasttrack the development of our own project.
 
 </div>

@@ -10,7 +10,7 @@ links:
   - type: Twitter
     username: Ibzor
   - type: Personal Webstie
-    href: "www.nottingham.ac.uk/politics/people/Ibtisam.Ahmed"
+    href: "https://nottingham.ac.uk/politics/people/Ibtisam.Ahmed"
 
 submitted: 2018-08-13
 ---

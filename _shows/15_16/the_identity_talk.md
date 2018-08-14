@@ -2,7 +2,7 @@
 title: The Identity Talk
 show_type: Culture
 period: Spring
-venue: Portland A floor
+venue: Portland A Floor
 date_start: 2016-04-18
 date_end: 2016-06-30
 

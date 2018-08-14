@@ -2,7 +2,7 @@
 title: The Identity Talk
 show_type: Culture
 period: Year Long
-venue: Portland A floor
+venue: Portland A Floor
 date_start: 2016-10-01
 date_end: 2017-06-19
 

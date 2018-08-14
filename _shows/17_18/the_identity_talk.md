@@ -2,7 +2,7 @@
 title: The Identity Talk
 show_type: Culture
 period: Autumn
-venue: Portland A floor
+venue: Portland A Floor
 date_start: 2017-10-01
 date_end: 2018-02-12
 

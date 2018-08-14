@@ -157,6 +157,8 @@
 
 - role: Head of IT
   icon: fas fa-laptop
+  aliases:
+    - Website Editor
   show: false
 
 - role: Head of Station Sound and Imaging

@@ -6,16 +6,16 @@ order: 95
 ---
 
 <div class="box-warning">
-  <i class="fa fa-exclamation-triangle"></i> We haven't fully defined the link list data type, breaking changes may still be made.
+  <i class="fas fa-exclamation-triangle"></i> We haven't fully defined the link list data type, breaking changes may still be made.
 </div>
 
 A link list is a standard format for representing a list of external resources used in various places on the site.
 
-## <i class="fa fa-tags"></i> Attribute Reference
+## <i class="fas fa-tags"></i> Attribute Reference
 
 {% include def-doc.html def=site.data.defs.link-list %}
 
-## <i class="fa fa-archive"></i> Archiving Resources
+## <i class="fas fa-archive"></i> Archiving Resources
 
 Linking to many online resources as part of a long-term project is risky. Websites may close or re-arrange their URLs rendering our links broken. To protect against this editors should create snapshots of resources when they link to them. These snapshots save the state of those resources at a single point in time. Unless the archiving service closes we should have a permanent record of all resources with snapshots.
 

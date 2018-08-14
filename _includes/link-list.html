@@ -3,19 +3,19 @@
 
   <dt class="single-line link--{{ link.type | downcase }}">
   	{% if link.icon %}
-		<i class="fa fa-fw {{ link.icon }}"></i>
+		<i class="fas fa-fw {{ link.icon }}"></i>
 	{% endif %}
 
 	{% if link.stars %}
 		<span class="stars" title="{{ link.rating }} → {{ link.stars | join ',' }}">
 			{% for star in (1..link.stars[0]) %}
-				<i class="fa fa-star {% increment star %}"></i>
+				<i class="fas fa-star {% increment star %}"></i>
 			{% endfor %}
 			{% if link.stars[1] == 0.5 %}
-				<i class="fa fa-star-half-o"></i>
+				<i class="fas fa-star-half"></i>
 			{% endif %}
 			{% for nostar in (1..link.stars[2]) %}
-				<i class="fa fa-star-o {% increment nostar %}"></i>
+				<i class="fas fa-star {% increment nostar %}"></i>
 			{% endfor %}
 		</span>
 	{% endif %}

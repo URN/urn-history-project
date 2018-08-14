@@ -20,7 +20,7 @@ If you're new to Git and GitHub, there are a [wealth of resources][gh-resources]
 - Find an [open issue](#-issues) and submit a [proposed fix](#-making-improvements).
 - Help evaluate [open pull requests][gh-pulls], by reading through and [testing what's proposed](#-testing-pull-requests).
 
-## <i class="fa fa-envelope"></i> Collecting Information
+## <i class="fas fa-envelope"></i> Collecting Information
 
 We've only collected a subset of all the shows the station has done over the years. We need people to reach out to the alumni community and gather both memories of past shows and events and physical media from the time.
 

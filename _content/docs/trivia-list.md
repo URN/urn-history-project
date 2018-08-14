@@ -7,7 +7,7 @@ order: 98
 
 A trivia list is a standard format for representing a list of trivia / anecdotes used in various places on the site.
 
-## <i class="fa fa-tags"></i> Attribute Reference
+## <i class="fas fa-tags"></i> Attribute Reference
 
 {% include def-doc.html def=site.data.defs.trivia-list %}
 

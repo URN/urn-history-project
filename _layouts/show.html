@@ -54,11 +54,11 @@ body_class: section-archives layout-show
 
         <div class="meta-row">
           <!-- {% if show.student_written %}
-            <i class="meta-icon fa fa-pencil" title="Student Written"></i>
+            <i class="meta-icon fas fa-pencil-alt" title="Student Written"></i>
           {% elsif show.playwright_type == "devised" %}
-            <i class="meta-icon fa fa-group"></i>
+            <i class="meta-icon fas fa-users"></i>
           {% else %}
-            <i class="meta-icon fa fa-book"></i>
+            <i class="meta-icon fas fa-book"></i>
           {% endif %}
           <div class="meta-col show-playwright show-playwright-{{ show.playwright_type }}">
             <p>
@@ -81,7 +81,7 @@ body_class: section-archives layout-show
               {% endif %}
             </p>
           </div> -->
-          <i class="meta-icon fa fa-reorder"></i>
+          <i class="meta-icon fas fa-bars"></i>
           <div class="meta-col show-show_type">
             <p class="show_type-{{ show.show_type | downcase | replace:" ","-" }}">
             {% if show.company %}
@@ -93,11 +93,11 @@ body_class: section-archives layout-show
             {% endif %}
             </p>
           </div>
-          <i class="meta-icon fa fa-calendar"></i>
+          <i class="meta-icon fas fa-calendar-alt"></i>
           <div class="meta-col show-date">
             <p>{% if show.date_start %}{% include liquid/date_range.html %}{% else %}<span class="unknown">Dates Unknown</span>{% endif %}</p>
           </div>
-          <i class="meta-icon fa fa-home"></i>
+          <i class="meta-icon fas fa-home"></i>
           <div class="meta-col show-venue">
             <p>
             {% if show.venue and show.venue != "unknown" %}

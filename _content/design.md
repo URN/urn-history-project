@@ -57,11 +57,11 @@ Sed sit amet nibh lorem. Pellentesque habitant morbi tristique senectus et netus
 ## Boxes
 
   <div class="box-error">
-    <i class="fa fa-ban"></i>
+    <i class="fas fa-ban"></i>
     <p><strong>Error!</strong> Uh-oh, something is wrong. I'm a <a data-proofer-ignore href="">Link</a>.</p>
   </div>
   <div class="box-warning">
-    <i class="fa fa-exclamation-triangle"></i>
+    <i class="fas fa-exclamation-triangle"></i>
     <p><strong>Warning!</strong> Hmm, something's not quite right. I'm a <a data-proofer-ignore href="">Link</a>.</p>
   </div>
   <div class="box-success">
@@ -69,7 +69,7 @@ Sed sit amet nibh lorem. Pellentesque habitant morbi tristique senectus et netus
     <p><strong>Yipee!</strong> Yeah, something is successful. I'm a <a data-proofer-ignore href="">Link</a>.</p>
   </div>
   <div class="box-info">
-    <i class="fa fa-info-circle"></i>
+    <i class="fas fa-info-circle"></i>
     <p><strong>Hey</strong> Here's some info. I'm a <a data-proofer-ignore href="">Link</a>.</p>
   </div>
   <div class="box-debug">

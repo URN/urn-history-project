@@ -23,7 +23,7 @@ search: false
   <div data-search-results>
 
     <div class="search-loading">
-      <i class="fa fa-cog fa-spin"></i>
+      <i class="fas fa-cog fa-spin"></i>
     </div>
 
   </div>
@@ -36,7 +36,7 @@ search: false
     <% if (item.type == "show") { %>
       <div class="search-result">
         <h3 class="search-result-show-title">
-          <% if (item.poster_thumb_tag) { %><%= item.poster_thumb_tag %><% } else { %><i class="fa fa-ticket"></i><% } %>
+          <% if (item.poster_thumb_tag) { %><%= item.poster_thumb_tag %><% } else { %><i class="fas fa-microphone"></i><% } %>
           <a href="<%= item.link %>"><%= item.title %></a>
           <% if (item.playwright) { %><span class="search-result-playwright"><%= item.playwright_formatted_long %></span><% } %>
           </h3>
@@ -60,12 +60,12 @@ search: false
         </div>
       <% } else if (item.group == "docs") { %>
         <div class="search-result">
-          <h3><i class="fa fa-file-text-o"></i> <a href="<%= item.link %>"><%= item.title %></a></h3>
+          <h3><i class="fas fa-file-alt"></i> <a href="<%= item.link %>"><%= item.title %></a></h3>
           <p><%= item.excerpt %></p>
         </div>
       <% } else { %>
         <div class="search-result">
-          <h3><i class="fa fa-file"></i> <a href="<%= item.link %>"><%= item.title %></a></h3>
+          <h3><i class="fas fa-file"></i> <a href="<%= item.link %>"><%= item.title %></a></h3>
           <p><%= item.excerpt %></p>
         </div>
       <% } %>

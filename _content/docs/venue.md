@@ -9,7 +9,7 @@ redirect_from:
 
 Venue data is stored as `_venues/venue-name.md`. The content is the venue description.
 
-## <i class="fa fa-tags"></i> Attribute Reference
+## <i class="fas fa-tags"></i> Attribute Reference
 
 {% include def-doc.html def=site.data.defs.venue %}
 

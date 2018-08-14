@@ -17,7 +17,7 @@
   "dependencies": {
     "bourbon": "~4.3.3",
     "fgrid": "*",
-    "font-awesome": "~4.7.0",
+    "font-awesome": "~5.2.0",
     "ionicons": "~2.0.1",
     "mousetrap": "~1.6.0",
     "github-issues-widget": "https://github.com/chrismear/github-issues-widget.git",

@@ -10,7 +10,7 @@ A person list is a format for storing a list of roles and names used for various
 
 A role or name flagged as unknown will be styled differently and a warning will show above the list asking for help.
 
-## <i class="fa fa-tags"></i> Attribute Reference
+## <i class="fas fa-tags"></i> Attribute Reference
 
 {% include def-doc.html def=site.data.defs.person-list %}
 

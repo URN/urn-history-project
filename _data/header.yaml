@@ -4,15 +4,15 @@
 - section: Archives
   href: /years/
   slug: archives
-  icon: fa fa-ticket
+  icon: fas fa-microphone
 - section: People
   href: /people/
   slug: people
-  icon: fa fa-users
+  icon: fas fa-users
 - section: History
   href: /history/
   slug: history
-  icon: fa fa-book
+  icon: fas fa-book
 - section: About
   href: /about/
   slug: about

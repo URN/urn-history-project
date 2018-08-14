@@ -235,7 +235,7 @@ collectPersonFormSetup = ->
 disableCollectForm = ->
   $('.collect-submit').attr("disabled", true)
   $('.collect-submit').addClass('disabled')
-  $('.collect-submit').html('<i class="fa fa-circle-o-notch fa-spin"></i>')
+  $('.collect-submit').html('<i class="fas fa-circle-notch fa-spin"></i>')
 
 
 enableCollectForm = ->

@@ -9,7 +9,7 @@ redirect_from:
 
 Biographies of theatre alumni are stored as `_people/firstname_lastname.md`.
 
-## <i class="fa fa-tags"></i> Attribute Reference
+## <i class="fas fa-tags"></i> Attribute Reference
 
 {% include def-doc.html def=site.data.defs.person %}
 

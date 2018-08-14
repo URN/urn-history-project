@@ -9,7 +9,7 @@ published: false
 
 Show records currently have a *'Publicity Materials'* and *'Production Shots'* section. All images are stored in the [New Theatre SmugMug](https://photos.urn1350.net), other binaries are stored in the repo's `assets/for_shows/` folder.
 
-## <i class="fa fa-tags"></i> Attribute Reference
+## <i class="fas fa-tags"></i> Attribute Reference
 
 {% include def-doc.html def=site.data.defs.assets %}
 

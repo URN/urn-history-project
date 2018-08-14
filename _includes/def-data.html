@@ -12,16 +12,16 @@
       <dd tabindex="0">
           <!-- document -->
           {% if def.type == "document" and page[def.attr] != nil %}
-            <i class="fa fa-file-o"></i>
+            <i class="fas fa-file"></i>
             <a href="{{ page[def.attr].url }}" data-proofer-ignore>
               {{ page[def.attr].title | escape_once }}
             </a>
           <!-- boolean -->
           {% elsif def.type == "boolean" %}
             {% if page[def.attr] %}
-                <i class="fa fa-check debug-data__value--true"></i>
+                <i class="fas fa-check debug-data__value--true"></i>
             {% else %}
-                <i class="fa fa-times debug-data__value--false"></i>
+                <i class="fas fa-times debug-data__value--false"></i>
             {% endif %}
           <!-- array -->
           {% elsif def.type == "array" %}
@@ -34,7 +34,7 @@
           {% elsif def.type == "documentarray" %}
             {% for i in page[def.attr] %}
             <div>
-              <i class="fa fa-file-o"></i>
+              <i class="fas fa-file"></i>
               <a href="{{ i.url }}" data-proofer-ignore>{{ i.title | escape_once }}</a>
             </div>
             {% endfor %}
@@ -42,7 +42,7 @@
           {% elsif def.type == "hash" %}
             {% for i in page[def.attr] %}
             <div>
-                {{ i[0] | escape_once }} <i class="fa fa-arrow-right"></i>
+                {{ i[0] | escape_once }} <i class="fas fa-arrow-right"></i>
                 <code>{{ i[1] | escape_once }}</code>
             </div>
             {% endfor %}

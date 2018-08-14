@@ -13,4 +13,4 @@ The following is a listing of the most recent commits to the project's [reposito
 
 {% gitactivity %}
 
-*<i class="fa fa-external-link"></i> Further change history can be found on our [GitHub repository](https://github.com/urn/urn-history-project).*
+*<i class="fas fa-external-link"></i> Further change history can be found on our [GitHub repository](https://github.com/urn/urn-history-project).*

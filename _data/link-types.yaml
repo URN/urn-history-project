@@ -5,26 +5,28 @@
 # http://fontawesome.io/icons/ for the icon names.
 
 - type: default
-  icon: fa fa-link
+  icon: fas fa-link
 
 - type: Personal Website
 - type: Portfolio
 
 - type: Spotlight
 - type: StageJobsPro
+
 - type: IMDb
+  icon: fab fa-imdb
 
 - type: Twitter
-  icon: fa fa-twitter
+  icon: fab fa-twitter
   href: https://twitter.com/???
 - type: LinkedIn
-  icon: fa fa-linkedin-square
+  icon: fab fa-linkedin
   data: data-proofer-ignore
   href: https://www.linkedin.com/in/???
 
 - type: Article
-  icon: fa fa-newspaper-o
+  icon: fas fa-newspaper
   is_news: true
 - type: Review
-  icon: fa fa-newspaper-o
+  icon: fas fa-newspaper
   is_news: true

@@ -34,7 +34,7 @@ class ReportModel
 disableReportForm = ->
   $('.report-submit').attr("disabled", true)
   $('.report-submit').addClass('disabled')
-  $('.report-submit').html('<i class="fa fa-circle-o-notch fa-spin"></i>')
+  $('.report-submit').html('<i class="fas fa-circle-notch fa-spin"></i>')
 
 
 enableReportForm = ->

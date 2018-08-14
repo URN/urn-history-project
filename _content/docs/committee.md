@@ -9,7 +9,7 @@ redirect_from:
 
 Committee listings are stored as `_committees/YY_YY.md` with YY_YY being the academic year 'span'.
 
-## <i class="fa fa-tags"></i> Attribute Reference
+## <i class="fas fa-tags"></i> Attribute Reference
 
 {% include def-doc.html def=site.data.defs.committee %}
 

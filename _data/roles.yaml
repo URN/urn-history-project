@@ -12,12 +12,12 @@
     - Shadow Director
 
 - role: Producer
-  icon: fa fa-money
+  icon: fas fa-money-bill-alt
   aliases:
     - Assistant Producer
 
 - role: Production Advisor
-  icon: fa fa-comments-o
+  icon: fas fa-comments
   aliases:
     - Improv Advisor
 
@@ -31,20 +31,20 @@
     - Design Assistant
 
 - role: Stage Manager
-  icon: fa fa-bookmark
+  icon: fas fa-bookmark
 - role: Technical Director
-  icon: fa fa-plug
+  icon: fas fa-plug
   aliases:
     - Shadow Technical Director
     - Tech Master
 - role: Lighting Designer
-  icon: fa fa-lightbulb-o
+  icon: fas fa-lightbulb
   aliases:
     - Lighting Design
     - Shadow Lighting Designer
     - Shadow Lighting Design
 - role: Sound Designer
-  icon: fa fa-volume-up
+  icon: fas fa-volume-up
   aliases:
     - Sound Design
     - Shadow Sound Designer
@@ -53,7 +53,7 @@
   aliases:
     - Video Design
 - role: Technical Operator
-  icon: fa fa-headphones
+  icon: fas fa-headphones
   aliases:
     - Sound Operator
 - role: Sound Engineer
@@ -66,15 +66,15 @@
     - Followspot
 
 - role: Composer
-  icon: fa fa-music
+  icon: fas fa-music
   aliases:
     - Original Score
 - role: Musical Director
-  icon: fa fa-music
+  icon: fas fa-music
 - role: Vocalist
-  icon: fa fa-music
+  icon: fas fa-music
 - role: Musician
-  icon: fa fa-music
+  icon: fas fa-music
 
 - role: Make Up Artist
   icon: ion-paintbrush
@@ -89,19 +89,19 @@
     - Costumes
 
 - role: Publicity Designer
-  icon: fa fa-picture-o
+  icon: fas fa-image
 - role: Publicity Manager
-  icon: fa fa-picture-o
+  icon: fas fa-image
 - role: Publicist
-  icon: fa fa-picture-o
+  icon: fas fa-image
 - role: Poster Designer
-  icon: fa fa-picture-o
+  icon: fas fa-image
   aliases:
     - Poster Design
 - role: Artwork
-  icon: fa fa-picture-o
+  icon: fas fa-image
 - role: Photographer
-  icon: fa fa-camera-retro
+  icon: fas fa-camera-retro
   aliases:
     - Photography
 
@@ -109,54 +109,62 @@
   icon: ion-hammer
 
 - role: Choreographer
-  icon: fa fa-street-view
+  icon: fas fa-street-view
   aliases:
     - Choreography
 
 - role: Station Editor
-  icon: fa fa-star
+  icon: fas fa-star
   show: false
 
 - role: Deputy Station Editor
-  icon: fa fa-star
+  icon: fas fa-star
   show: false
 
 - role: Head of Finance and Sales
-  icon: fa fa-money
+  icon: fas fa-money-bill-alt
   aliases:
     - Head of Promotion and Finance
   show: false
 
 - role: Head of Speech Based Programming
-  icon: fa fa-comments
+  icon: fas fa-comments
   show: false
 
 - role: Head of Specialist Music Programming
-  icon: fa fa-headphones
+  icon: fas fa-headphones
   show: false
 
 - role: News Editor
-  icon: fa fa-newspaper-o
+  icon: fas fa-newspaper
   show: false
 
 - role: Sports Editor
-  icon: fa fa-futbol-o
+  icon: fas fa-futbol
   show: false
 
 - role: Playlist Editor
-  icon: fa fa-music
+  icon: fas fa-music
+  show: false
+
+- role: Drama Editor
+  icon: fas fa-theater-masks
   show: false
 
 - role: Technical Manager
-  icon: fa fa-wrench
+  icon: fas fa-wrench
+  show: false
+
+- role: Head of IT
+  icon: fas fa-laptop
   show: false
 
 - role: Head of Station Sound and Imaging
-  icon: fa fa-microphone
+  icon: fas fa-volume-down
   aliases:
     - Head of Audio Production
   show: false
 
 - role: Head of Welfare
-  icon: fa fa-heart
+  icon: fas fa-heart
   show: false

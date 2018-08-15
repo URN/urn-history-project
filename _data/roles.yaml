@@ -167,6 +167,12 @@
     - Head of Audio Production
   show: false
 
+- role: Head of Marketing and Online Content
+  icon: fas fa-chart-line
+  aliases:
+    - Brand Manager
+  show: false
+
 - role: Head of Welfare
   icon: fas fa-heart
   show: false

@@ -127,6 +127,10 @@
     - Head of Promotion and Finance
   show: false
 
+- role: Head of Daytime Programming
+  icon: fas fa-grin-squint
+  show: false
+
 - role: Head of Speech Based Programming
   icon: fas fa-comments
   show: false

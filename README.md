@@ -4,7 +4,7 @@ The history project collects and publishes information on past shows, committees
 
 We use a static site generator ([Jekyll](jekyllrb.com)) among other tools to turn the data and website source hosted here into the website published at [history.urn1350.net](https://history.urn1350.net).
 
-This project is run by [a group](https://history.urn1350.net/humans.txt) from the New Theatre's Alumni Network.
+This project is run by [a group](https://history.urn1350.net/humans.txt) from Univeristy Radio Nottingham.
 
 ## Special Thanks
 

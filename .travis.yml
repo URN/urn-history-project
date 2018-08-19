@@ -35,8 +35,3 @@ script:
 
 after_success:
 - _bin/deploy_ghp.sh
-# - _bin/deploy_netlify.sh
-# - bundle exec ruby _bin/github_tasks.rb
-
-# env:
-#   global:

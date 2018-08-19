@@ -1,0 +1,12 @@
+DirectoryPath: _site
+CheckDoctype: false
+IgnoreURLs:
+- "history.urn1350.net"
+- "photos.smugmug.com"
+- "photos.urn1350.net"
+- "archive.is"
+- "soundcloud.com"
+- "impactnottingham.com"
+- "http://www.su-web2.nottingham.ac.uk/"
+IgnoreDirs:
+- "^lib"

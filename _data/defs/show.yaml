@@ -150,7 +150,6 @@
 - attr: assets
   type: array
   short: Publicity and other materials
-  description: "Uses the [photos and assets](/docs/photos_and_assets/) format."
 
 - attr: poster
   type: hash

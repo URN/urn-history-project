@@ -7,6 +7,9 @@ course:
 links:
   - type: Twitter
     username: JamesPkns
-award: Lifetime Membership
+award:
+  - title: Lifetime Membership
+    year: 2017
+    org: URN
 graduated: 2017
 ---

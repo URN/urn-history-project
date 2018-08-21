@@ -66,9 +66,9 @@
   generated: true
 
 - attr: award
-  type: string
-  short: Award person recieved on leaving the station
-  description: "Should be in title case, Fellowship, Commendation. If not applicable line should be omitted."
+  type: array
+  short: Award person recieved for work at the station
+  description: "If not applicable line should be omitted."
 
 - attr: careers
   type: array

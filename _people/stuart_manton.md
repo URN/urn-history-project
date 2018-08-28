@@ -9,6 +9,41 @@ links:
 - type: LinkedIn
   username: stumanton
 
+award:
+- title: Best Interview (Nominated)
+  year: 2011
+  org: SRA
+- title: Best Live Event or OB (Silver)
+  year: 2011
+  org: SRA
+- title: Best Journalistic Programming (Silver) (The Pulse)
+  year: 2011
+  org: SRA
+- title: Best Student Radio Station (Gold)
+  year: 2011
+  org: SRA
+- title: Best Journalistic Programming (Gold) (The Pulse - The Truth about Taxis)
+  year: 2012
+  org: SRA
+- title: Best Journalistic Programming (Silver) (The Pulse - Who's Lenton Is It?)
+  year: 2012
+  org: SRA
+- title: Best Journalistic Programming (Bronze) (The Pulse - Who's Protecting Who?)
+  year: 2012
+  org: SRA
+- title: Best Marketing and Station Sound (Gold)
+  year: 2012
+  org: SRA
+- title: Best Student Radio Station (Gold)
+  year: 2012
+  org: SRA
+- title: Best Marketing and Station Sound (Bronze)
+  year: 2013
+  org: SRA
+- title: Best Student Radio Station (Gold)
+  year: 2013
+  org: SRA
+submitted: 2018-08-21
 ---
 
 Obviously being part of the team that won Station of the Year every year for the four years I was at URN - particularly 2011/12 and 2012/13 where I edited the entries. This was special.

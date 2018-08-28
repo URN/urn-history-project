@@ -106,6 +106,17 @@ published: true
     form_data.forEach (x) ->
       form_dict[x['name']] = x['value'].replace(/[^\x00-\x7F]/g, "");
 
+    today = new Date
+    dd = today.getDate()
+    #The value returned by getMonth is an integer between 0 and 11, referring 0 to January, 1 to February, and so on.
+    mm = today.getMonth() + 1
+    yyyy = today.getFullYear()
+    if dd < 10
+      dd = '0' + dd
+    if mm < 10
+      mm = '0' + mm
+    today = yyyy + '-' + mm + '-' + dd
+
     form_data_computed =
       'contact_allowed_yn': if form_dict['contact_allowed'] == 'on' then 'Yes' else 'No'
       'contact_allowed_tf': if form_dict['contact_allowed'] == 'on' then 'true' else 'false'
@@ -176,6 +187,7 @@ links: *fill me out
 #{form_dict['links']}
 award: *fill me out
 #{form_dict['awards']}
+submitted: #{today}
 ---
 
 #{form_dict['bio1']}

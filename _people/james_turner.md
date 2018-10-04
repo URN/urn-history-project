@@ -6,6 +6,6 @@ graduated: 2018
 contact_allowed: true
 
 links:
-  - type: Personal Webstie
+  - type: Personal Website
     href: "https://jamesturner.im"
 ---

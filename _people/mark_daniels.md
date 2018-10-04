@@ -8,7 +8,7 @@ contact_allowed: true
 links:
   - type: LinkedIn
     username: odista
-  - type: Personal Webstie
+  - type: Personal Website
     href: "http://www.odista.com/"
 
 

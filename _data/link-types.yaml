@@ -26,6 +26,9 @@
   icon: fab fa-linkedin
   data: data-proofer-ignore
   href: https://www.linkedin.com/in/???
+- type: GitHub
+  icon: fab fa-github
+  href: https://github.com/???
 
 - type: Article
   icon: fas fa-newspaper

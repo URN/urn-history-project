@@ -18,7 +18,7 @@ module Jekyll
         "grad_year" => @year+1,
         "year" => "#{ year_span_short[0] }_#{ year_span_short[1] }",
         "decade" => @year.to_s[0..2],
-        "fellows" => [],
+        "sras" => [],
         "commendations" => [],
       }
 

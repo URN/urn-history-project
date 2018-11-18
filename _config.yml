@@ -99,6 +99,9 @@ collections:
   people:
     output: true
     permalink: people/:path/
+  sras:
+    output: true
+    permalink: sras/:path/
 
 defaults:
   # Shows

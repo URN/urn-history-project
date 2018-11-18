@@ -16,17 +16,17 @@ module Jekyll
       @site = site
 
       people = site.collections["people"].docs
-      fellows = people.select { |p| p.data["award"].include? "Fellowship" }
+      sras = people.select { |p| p.data["award"].include? "Fellowship" }
       commendations = people.select { |p| p.data["award"].include? "Commendation" }
 
       # sort_people from people.rb
-      fellows.sort!(&method(:sort_people))
+      sras.sort!(&method(:sort_people))
       commendations.sort!(&method(:sort_people))
 
-      input_holders_into_years(fellows, "fellows")
+      input_holders_into_years(sras, "sras")
       input_holders_into_years(commendations, "commendations")
 
-      site.data["fellows"] = fellows
+      site.data["sras"] = sras
       site.data["commendations"] = commendations
 
     end

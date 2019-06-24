@@ -99,6 +99,11 @@
   short: Date of last performance
   description: "In the format YYYY-MM-DD, omit if show only ran one day."
 
+- attr: award
+  type: array
+  short: List of awards the show has won.
+  description: "Specify title, year and organisation who gave the award (eg. SRAs, URN, etc.). Awards given to people as part of a show should be recorded on the person's entry."
+
 - attr: excerpt
   type: string
   description: "Generated excerpt of synopsis for use in search results and other summaries."

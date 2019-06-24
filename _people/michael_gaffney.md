@@ -8,7 +8,10 @@ contact_allowed: true
 links:
   - type: Twitter
     username: M_W_Gaffney
-award: SU Award for Contributing to the Student Experience.
+award:
+  - title: SU Award for Contributing to the Student Experience
+    year: 2013?
+    org: SU
 submitted: 2018-08-21
 
 ---

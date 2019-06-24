@@ -9,6 +9,23 @@ links:
   - type: Twitter
     username: ofluff
 
+award:
+  - title: Best Newcomer
+    year: 2012
+    org: SRA
+  - title: Best Journalistic Programming (Bronze) (The Science Show)
+    year: 2012
+    org: SRA
+  - title: Best Journalistic Programming (Silver) (The Science Show)
+    year: 2013
+    org: SRA
+  - title: Best Speech Program (Silver) (The Science Show - A Brief History of You)
+    year: 2014
+    org: SRA
+  - title: Best Technical Achievement (Gold)
+    year: 2015
+    org: SRA
+
 submitted: 2018-08-13
 ---
 

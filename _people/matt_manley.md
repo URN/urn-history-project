@@ -4,6 +4,9 @@ gender: male
 links:
   - type: Twitter
     username: MattManley95
-award: Lifetime Membership
+award:
+  - title: Lifetime Membership
+    year: 2017
+    org: URN
 graduated: 2017
 ---

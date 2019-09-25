@@ -8,5 +8,6 @@ IgnoreURLs:
 - "soundcloud.com"
 - "impactnottingham.com"
 - "http://www.su-web2.nottingham.ac.uk/"
+- "http://www.odista.com/"
 IgnoreDirs:
 - "^lib"

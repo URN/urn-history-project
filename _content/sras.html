@@ -7,43 +7,45 @@ current: sras
 ---
 
 <div class="banner-header fellows-header">
-  <h1>{{ page.title }}</h1>
-  <i class="banner-header-icon fas fa-trophy"></i>
+    <h1>{{ page.title }}</h1>
+    <i class="banner-header-icon fas fa-trophy"></i>
 </div>
 
-
 <div class="wrapper">
-  <hr>
-  <ul class="people-grid">
-  {% for sra in site.sras reversed %}
-    <li>
-      <div class="title" style="align-self: center;">
-        <a href="/years/">{{ sra.year }}</a>
-      </div>
-      <ul class="people-grid-list" style="text-align: center; ">
-      {% for award in sra.awards %}
-        <li style="align-self: center; text-align: center">
-          <div style="align-self: center;">
-            {% case award.level %}
-              {% when 'Gold' %}
-                <i class="fas fa-trophy" style="color: #FFD700; margin: 0 5px;"></i>
-              {% when 'Silver' %}
-                <i class="fas fa-trophy" style="color: #C0C0C0; margin: 100% 5px;"></i>
-              {% when 'Bronze' %}
-                <i class="fas fa-trophy" style="color: #CD7F32; margin: 100% 5px;"></i>
-            {% endcase %}
-          </div>
-            <div class="name">{{ award.award_name }}
-            {% if award.awarded_to %}
-              <hr style="margin: 3px 0">
-              {{ award.awarded_to }}
-            {% endif %}
+    <hr style="margin-bottom: 10px">
+    <div class="container">
+        {% for sra in site.sras reversed %}
+            <div class="row" style="margin: 0">
+                <div class="people-grid col-md-2" style="align-self: center;">
+                    <div class="title">
+                        <a href="/years/">{{ sra.year }}</a>
+                    </div>
+                </div>
+                <div class="col-md-10">
+                    <ul style="list-style: none">
+                        {% for award in sra.awards %}
+                          <li>
+                              <div class="name">
+                                  {% case award.level %}
+                                    {% when 'Gold' %}
+                                      <i class="fas fa-trophy" style="color: #FFD700;"></i>
+                                    {% when 'Silver' %}
+                                      <i class="fas fa-trophy" style="color: #C0C0C0;"></i>
+                                    {% when 'Bronze' %}
+                                      <i class="fas fa-trophy" style="color: #CD7F32;"></i>
+                                  {% endcase %}
+
+                                  {{ award.award_name }}
+                                  {% if award.awarded_to %}
+                                    ({{ award.awarded_to }})
+                                  {% endif %}
+                              </div>
+                          </li>
+                        {% endfor %}
+                    </ul>
+                </div>
             </div>
-        </li>
-      {% endfor %}
-      </ul>
-    </li>
-    <hr>
-  {% endfor %}
-  </ul>
+            <hr style="margin-bottom: 10px">
+        {% endfor %}
+    </div>
 </div>

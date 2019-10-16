@@ -12,6 +12,7 @@ _bin/htmltest
 .htmltest.*
 .bundle/
 vendor/
+.idea/
 
 for_shows_uncompressed
 for_shows_process

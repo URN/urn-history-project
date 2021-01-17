@@ -9,5 +9,6 @@ IgnoreURLs:
 - "impactnottingham.com"
 - "http://www.su-web2.nottingham.ac.uk/"
 - "http://www.odista.com/"
+- "twitter.com"
 IgnoreDirs:
 - "^lib"

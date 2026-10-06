@@ -1,12 +1,11 @@
 # Site settings
 title: University Radio Nottingham History Project
-email: history@urn1350.net
+email: history@urn1350.co.uk
 twitter: urnalumni
 description: "Archive project collecting past shows, committees and alumni biographies to piece together the station's dynamic and vibrant history."
 baseurl: "" # the subpath of your site, e.g. /blog/
-url: "https://history.urn1350.net" # the base hostname & protocol for your site
+url: "https://history.urn1350.co.uk" # the base hostname & protocol for your site
 ntbot_endpoint: "https://cme66e01h3.execute-api.eu-west-2.amazonaws.com/default/urnbotPostIssue" # For issue posting
-assets_baseurl: "https://assets.history.urn1350.net"
 
 # How many shows is too few for a year
 year_low_shows: 16
@@ -46,6 +45,8 @@ exclude:
 - manifest.json
 - node_modules/
 - package.json
+- package-lock.json
+- .ruby-version
 - Rakefile
 - README.md
 - run_dev.sh
@@ -225,8 +226,8 @@ image:
 
 # Config for the prose editor
 prose:
-  ignore: ['_bin', '_utilities', 'CNAME', '.gitignore', 'js', 'css', '_site', '_sass', '_layouts', '_includes', '.travis.yml', 'Gemfile', 'Gemfile.lock', 'lib', 'js', '_plugins', 'feeds', '_years', '.bowerrc', '.gitmodules', '_config.yml', 'bower.json', 'package.json', 'robots.txt']
-  siteurl: "https://history.urn1350.net"
+  ignore: ['_bin', '_utilities', 'CNAME', '.gitignore', 'js', 'css', '_site', '_sass', '_layouts', '_includes', 'Gemfile', 'Gemfile.lock', 'lib', 'js', '_plugins', 'feeds', '_years', '.gitmodules', '_config.yml', 'package.json', 'robots.txt']
+  siteurl: "https://history.urn1350.co.uk"
   media: "images"
   metadata:
     _shows:

@@ -14,6 +14,6 @@ excerpt: ""
   Last update: {{ site.time | date: "%Y-%m-%d" }}
   Language: English
   Doctype: HTML5
-  Build: Gulp, Jekyll, Travis CI
+  Build: Gulp, Jekyll, GitHub Actions
   Test: htmltest, jsonlint
   IDE: Sublime Text

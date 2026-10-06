@@ -111,15 +111,6 @@ module Jekyll
       end
     end
 
-    def get_show_smugmug(show)
-      if show.data.key? "prod_shots"
-        smugalbum = SmugAlbum.new
-        return smugalbum.get_show_photos(show.data["prod_shots"])
-      else
-        return nil
-      end
-    end
-
     def get_show_legacy_paths(show)
       # Retired, was live 2015-10-29 until 2017-02-24
       # "shows/#{show.data['year']}/#{show.basename_without_ext}.html"
@@ -187,22 +178,11 @@ module Jekyll
         show.data['trivia'] = Trivia::QuoteList.new(@site, show.data['trivia'])
       end
 
-      # Fetch SmugMug album data
-      show.data["smugmug_album"] = get_show_smugmug(show)
-
       # Generate the legacy path for 301 redirect re. #142 Make semantic and pretty urls
       # No legacy paths currently, disable
       # show.data["redirect_from"] = Array(get_show_legacy_paths(show)).freeze
 
-      # Replace assets' image attr with a SmugImage
       show.data["assets"] ||= []
-      show.data["assets"].each do |asset|
-        if asset.key? "image"
-          asset["image"] = SmugImage.new(asset["image"])
-        elsif asset.key? "video"
-          asset["video"] = SmugImage.new(asset["video"])
-        end
-      end
 
       # Set the show poster attribute, see #117
       display_image = get_show_display_image(show)

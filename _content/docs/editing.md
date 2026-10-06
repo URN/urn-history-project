@@ -7,7 +7,7 @@ order: 10
 
 This guide will take you through the types of code that are used throughout the site, where it's all stored, and our approximate coding style we use.
 
-Information about getting started and _how_ to edit can be found in our [Contributors' Guide](https://history.urn1350.net/docs/contributing).
+Information about getting started and _how_ to edit can be found in our [Contributors' Guide](https://history.urn1350.co.uk/docs/contributing).
 
 
 ## <i class="octicon octicon-gist"></i> Languages and Syntaxes Used
@@ -51,10 +51,10 @@ The most commonly edited content files are person, show and venue files.
 |---
 | File | Lives in | Documentation Link
 | - | - | -
-| Show | `_shows/` | [Shows](https://history.urn1350.net/docs/show/)
-| Committee | `_committees/` | [Committees](https://history.urn1350.net/docs/committee/)
-| Person | `_people/` | [People](https://history.urn1350.net/docs/person/)
-| Venue |`_venues/` | [Venues](https://history.urn1350.net/docs/venue/)
+| Show | `_shows/` | [Shows](https://history.urn1350.co.uk/docs/show/)
+| Committee | `_committees/` | [Committees](https://history.urn1350.co.uk/docs/committee/)
+| Person | `_people/` | [People](https://history.urn1350.co.uk/docs/person/)
+| Venue |`_venues/` | [Venues](https://history.urn1350.co.uk/docs/venue/)
 | - | - | -
 | Standalone Pages | `_content/` | [Above](#content-pages---markdown-and-yaml)
 | Liquid Template | `_includes/`, `_layouts/` | [External - Jekyll](https://jekyllrb.com/docs/templates/)
@@ -63,41 +63,34 @@ The most commonly edited content files are person, show and venue files.
 
 For each of the below areas, click on the <i class="octicon octicon-book"></i> icon to go to the relevant page of the documentation.
 
-### Years [<i class="octicon octicon-book"></i>](https://history.urn1350.net/docs/year/)
+### Years [<i class="octicon octicon-book"></i>](https://history.urn1350.co.uk/docs/year/)
 
 Years are one of the main attributes that are used within the project. These are important to get right and important for many different reasons.
 
-### Committees [<i class="octicon octicon-book"></i>](https://history.urn1350.net/docs/committee/)
+### Committees [<i class="octicon octicon-book"></i>](https://history.urn1350.co.uk/docs/committee/)
 
 New committees are usually added by a [Project Editor](https://github.com/orgs/newtheatre/people) at the start of each academic year. Committee files are stored in the `_committees/` folder. We do get submissions from alumni with information regarding past committees and these can be added by anyone.
 
-### People [<i class="octicon octicon-book"></i>](https://history.urn1350.net/docs/person-list/)
+### People [<i class="octicon octicon-book"></i>](https://history.urn1350.co.uk/docs/person-list/)
 
 You can't make a show without some people, but the History Project will generate people pages whenever they're in a list (below). However, dedicated pages can be created to specify things like course, career, photo, or a biography.
 
-### Person Lists [<i class="octicon octicon-book"></i>](https://history.urn1350.net/docs/person-list/)
+### Person Lists [<i class="octicon octicon-book"></i>](https://history.urn1350.co.uk/docs/person-list/)
 
 These are used mainly to populate the cast and crew lists for shows. Check out the documentation for the formatting of lists, which is very important. For people without dedicated profiles, these lists allow for automatic generation of profiles.
 
-### Venues [<i class="octicon octicon-book"></i>](https://history.urn1350.net/docs/venue/)
+### Venues [<i class="octicon octicon-book"></i>](https://history.urn1350.co.uk/docs/venue/)
 
 Over the years we've had a few different studios, as well as countless Outside Broadcasts. Venues is all about keeping track of the different places we've broadcast from.
 
-### Link Lists [<i class="octicon octicon-book"></i>](https://history.urn1350.net/docs/link-list/)
+### Link Lists [<i class="octicon octicon-book"></i>](https://history.urn1350.co.uk/docs/link-list/)
 
 These are used particularly for reviews placed within show files, but are also used for external links for both people and venues. The list of possible links is expanding as we grow the site, so could change in the future.
 
-### Trivia [<i class="octicon octicon-book"></i>](https://history.urn1350.net/docs/trivia-list/)
+### Trivia [<i class="octicon octicon-book"></i>](https://history.urn1350.co.uk/docs/trivia-list/)
 
 One of the things we love collecting for the History Project are little bits of trivia or anecdotes regarding shows. Be this a last minute cast change for one night or something that happened that amused the cast, these stories are a vital part of what makes the NNT the NNT.
 
-<!-- ### Photos and Assets [<i class="octicon octicon-book"></i>](https://history.urn1350.net/docs/photos-and-assets/)
-
-The History Project's visual records are stored in a [SmugMug Site](https://photos.urn1350.net/). This ranges from production shots and trailers, to backstage videos and lighting plans. Production shot galleries are public, but other archives, such as our album of headshots, are restricted such that only those with the link may view them in full (though individual photos crop up across the site).
-
-We're always looking for more media, no matter the size. Whether it's photos and videos, or posters and programmes, we'll have it all. Check out [how to upload](https://history.urn1350.net/upload/).
-
-Any binary assets, (pdfs etc.) are stored in a specific folder in the repository. These are stored using Large File Storage, or LFS. if you have any of these type of assets that you think may be useful to the project, please email <{{site.email}}>. -->
 
 ## <i class="octicon octicon-checklist"></i> Style Guide
 

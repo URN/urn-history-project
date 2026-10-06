@@ -24,7 +24,7 @@ If you're new to Git and GitHub, there are a [wealth of resources][gh-resources]
 
 We've only collected a subset of all the shows the station has done over the years. We need people to reach out to the alumni community and gather both memories of past shows and events and physical media from the time.
 
-If you fancy helping out, let one of the editors know by sending us an email at <history@urn1350.net>.
+If you fancy helping out, let one of the editors know by sending us an email at <history@urn1350.co.uk>.
 
 ## <i class="octicon octicon-issue-closed"></i> Issues
 
@@ -81,7 +81,7 @@ By editing on your computer, you can run the entire site and preview changes bef
 
 See [README.md](https://github.com/urn/urn-history-project/blob/master/README.md) for up to date install instructions.
 
-Getting the site running on your machine locally is easy to do on Mac and Linux. It _can_ be done on Windows, but it's tricky. The website [Run Jekyll on Windows](http://jekyll-windows.juthilo.com/) has a full tutorial on how to do this.
+Getting the site running on your machine locally is easy to do on Mac and Linux. It _can_ be done on Windows, but it's tricky. Jekyll's [Windows installation guide](https://jekyllrb.com/docs/installation/windows/) covers the Ruby side of this.
 
 #### Writing a good commit message
 
@@ -160,7 +160,7 @@ If you decide making these kinds of edits and contributions is for you, we'd lov
 
 See the other pages here for more detailed information about each section of the site.
 
-If you get stuck, or want to help out another way, send us an email at <history@urn1350.net> or get in touch with any of the [editors](https://github.com/orgs/urn/people).
+If you get stuck, or want to help out another way, send us an email at <history@urn1350.co.uk> or get in touch with any of the [editors](https://github.com/orgs/urn/people).
 
 
 [gh-repo]: https://github.com/urn/urn-history-project

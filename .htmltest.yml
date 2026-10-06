@@ -9,6 +9,7 @@ IgnoreURLs:
 - "http://www.su-web2.nottingham.ac.uk/"
 - "http://www.odista.com/"
 - "twitter.com"
+- "newtheatre.org.uk"
 - "https://github.com/join"
 - "imdb.com"
 IgnoreDirs:

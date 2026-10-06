@@ -69,14 +69,6 @@ module Jekyll
 
         venue_page.data['title_short'] ||= venue_page.data['title']
 
-        if venue_page.data['images']
-          venue_page.data['smug_images'] = []
-          for imageKey in venue_page.data['images']
-            smugImage = SmugImage.new(imageKey)
-            venue_page.data['smug_images'].push(smugImage)
-          end
-        end
-
         venue_page.data['is_listed'] = venue_page.data['show_count'] > 1
 
         # Set place_type_sort, used for listing cities on archive page

@@ -9,8 +9,6 @@ contact_allowed: true
 links:
   - type: Twitter
     username: Ibzor
-  - type: Personal Website
-    href: "https://nottingham.ac.uk/politics/people/Ibtisam.Ahmed"
 
 submitted: 2018-08-13
 ---

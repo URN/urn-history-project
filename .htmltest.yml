@@ -10,6 +10,7 @@ IgnoreURLs:
 - "http://www.odista.com/"
 - "twitter.com"
 - "newtheatre.org.uk"
+- "instagram.com"
 - "https://github.com/join"
 - "imdb.com"
 IgnoreDirs:

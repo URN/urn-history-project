@@ -29,13 +29,7 @@ class: venue
   </div>
 
   <div class="venue-photo venue-header__col">
-    {% if page.smug_images %}
-      {% for image in page.smug_images %}
-      <img src="{{ image.medium }}" alt="{{ page.title }}" />
-      {% endfor %}
-    {% else %}
     &nbsp;
-    {% endif %}
   </div>
 
   {% if page.location %}

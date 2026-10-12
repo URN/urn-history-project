@@ -30,11 +30,6 @@
   short: Person gender
   description: "Recognises male or female."
 
-- attr: headshot
-  type: hash
-  short: The SmugMug ID of the headshot
-  description: "Find IDs using [headshot utility](/util/smug-headshots/). Replaced with a SmugImage at runtime."
-
 - attr: course
   type: array
   short: The course, or courses the person studied

@@ -4,12 +4,7 @@
 set -e
 
 echo "Bundle path: $BUNDLE_PATH"
-echo "Pull Request: $TRAVIS_PULL_REQUEST"
-
-if [[ "$TRAVIS_BUILD_NUMBER" ]]
-then
-  echo "$TRAVIS_BUILD_NUMBER" > _includes/travis_build_number.txt
-fi
+echo "Event: $GITHUB_EVENT_NAME"
 
 if [[ $RESET = "true" ]]
 then

@@ -168,7 +168,7 @@ $show-photos-mob-gutter: 7px
 
   @include set-property-to-gutter(padding-right)
 
-  .gallery-control, .smugmug-link
+  .gallery-control
     a
       // Full size anchor, is the inner container
       display: block
@@ -194,40 +194,6 @@ $show-photos-mob-gutter: 7px
 
     @include respond-down(mob-land)
       display: none
-
-  .smugmug-link
-    $color-smugmug: #5B8800
-
-    flex-basis: 25%
-    flex: 1
-    overflow: hidden
-
-    background: darken($color-smugmug, 22%)
-
-    &:hover
-      background: darken($color-smugmug, 15%)
-
-    a
-      // Full size anchor, is the inner container
-      margin-bottom: 0
-      overflow: hidden
-      position: relative // For absolute use in .smugmug-link-logo
-
-    .smugmug-link-logo
-      position: absolute
-      top: 3px
-      left: 2px
-      img
-        // position: relative
-        // top: 4px
-        opacity: 0.2
-
-    .smugmug-link-text
-      padding-left: 41px
-      padding-top: 3px
-      font-size: 13px
-      color: $color-grey
-      text-align: center
 
   .fade-out-overlay
     $fade-out-v-size: 40px

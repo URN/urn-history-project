@@ -29,6 +29,3 @@ The <strong class="tag"><i class="octicon octicon octicon-pencil"></i> Improve T
 
 This process is a little bit more involved than the other two, see the [Contributors' Guide](/docs/contributing/) for more information, or to learn how to make larger changes, such as to multiple pages or templates. -->
 
-<!-- ## Upload images <span class="headerlite">&ndash; for photographs and other media</span>
-
-See the [sending in images](/upload/) page. -->

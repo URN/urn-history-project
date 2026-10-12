@@ -12,7 +12,7 @@ module Jekyll
       g = Git.open(File.join(Dir.getwd, "."))
 
       index = 0
-      g.log.each do |log|
+      g.log.execute.each do |log|
         if(index < 30)
           result << "<li>"
           result << log.date.strftime("%d %b")
@@ -40,7 +40,7 @@ module Jekyll
       g = Git.open(File.join(Dir.getwd, "."))
 
       index = 0
-      g.log.each do |log|
+      g.log.execute.each do |log|
         if(index < 1)
           result << log.date.strftime("%d %b")
           result << " - <a href='https://github.com/urn/urn-history-project/commit/"

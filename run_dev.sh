@@ -23,7 +23,7 @@ start () {
     docker run -itd \
         --name="history-project" \
         -p=8000:8000 \
-        -v "$(pwd)":/home/travis/newtheatre/history-project \
+        -v "$(pwd)":/home/urn/history-project \
         history-project \
         tail -f /dev/null
 }
@@ -43,31 +43,28 @@ script="echo '----- RSyncing repo into linux filesystem'     &&\
             --exclude 'node_modules'                        \
             --exclude 'lib'                                 \
             --exclude 'vendor/bundle'                       \
-            --exclude '_smugmug_cache'                      \
             --exclude 'tmp'                                 \
             --exclude '.sass-cache'                         \
             --exclude '_site'                         \
-            '/home/travis/newtheatre/history-project/' '/data/'    &&\
+            '/home/urn/history-project/' '/data/'    &&\
         cd /data"
 
 installdep="echo '----- Install htmltest' &&\
-    	curl https://f000.backblazeb2.com/file/wjdp-lib/htmltest > _bin/htmltest &&\
-        chmod +x _bin/htmltest &&\
+    	curl https://htmltest.wjdp.uk | bash -s -- -b _bin &&\
         echo '----- Bundle Install' &&\
-        bundle install --jobs=3 --retry=3 --deployment
+        bundle config set --local path vendor/bundle &&\
+        bundle install --jobs=3 --retry=3 &&\
         echo '----- NPM Install' &&\
-        npm install
-    	echo '----- Bower Install' &&\
-    	bower install --allow-root"
+        npm ci"
     	
 build_site="echo '----- Building Site' &&\
-    	gulp build"
+    	npx gulp build"
 
 test_site="echo '----- Testing Site' &&\
-    	gulp test"
+    	npx gulp test"
 
 serve_site="echo '----- Serving Site' &&\
-    	gulp dockerserver"
+    	npx gulp dockerserver"
 
 
 # Assemble the fragments, based on input parameters

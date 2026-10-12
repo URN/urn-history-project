@@ -1,14 +1,17 @@
 DirectoryPath: _site
 CheckDoctype: false
 IgnoreURLs:
-- "history.urn1350.net"
+- "history.urn1350.co.uk"
 - "photos.smugmug.com"
-- "photos.urn1350.net"
 - "archive.is"
 - "soundcloud.com"
 - "impactnottingham.com"
 - "http://www.su-web2.nottingham.ac.uk/"
 - "http://www.odista.com/"
 - "twitter.com"
+- "newtheatre.org.uk"
+- "instagram.com"
+- "https://github.com/join"
+- "imdb.com"
 IgnoreDirs:
 - "^lib"

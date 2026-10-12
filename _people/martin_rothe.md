@@ -12,8 +12,6 @@ links:
     username: martinrothe
   - type: GitHub
     username: mrrothe
-  - type: Personal Website
-    href: "https://blog.rothe.uk"
 
 submitted: 2018-09-29
 ---

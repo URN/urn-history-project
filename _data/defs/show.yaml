@@ -137,16 +137,6 @@
   type: string
   description: Replaces the text in the default 'Missing Details' box with a custom string (does not replace the call to action).
 
-- attr: prod_shots
-  type: string
-  short: SmugMug album ID for production shots
-  description: "Use [util/smug-albums](/util/smug-albums/) to find the AlbumID. Fetch is limited to the first 350 items."
-
-- attr: smugmug_album
-  type: hash
-  short: SmugAlbum object for prod_shots
-  generated: true
-
 - attr: assets
   type: array
   short: Publicity and other materials

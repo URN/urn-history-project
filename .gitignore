@@ -3,7 +3,6 @@
 .vagrant/
 _asset_bundler_cache/
 _site/
-_smugmug_cache/
 lib/
 node_modules/
 tmp/

@@ -115,10 +115,14 @@
 
 - role: Station Editor
   icon: fas fa-star
+  aliases:
+    - Head of Station
   show: false
 
 - role: Deputy Station Editor
   icon: fas fa-star
+  aliases:
+    - Deputy Head of Station
   show: false
 
 - role: Head of Finance and Sales
@@ -141,14 +145,24 @@
 
 - role: News Editor
   icon: fas fa-newspaper
+  aliases:
+    - Head of News Programming
   show: false
 
 - role: Sports Editor
   icon: fas fa-futbol
+  aliases:
+    - Head of Sports Programming
   show: false
 
 - role: Playlist Editor
   icon: fas fa-music
+  aliases:
+    - Head of Music
+  show: false
+
+- role: Head of Cultural Programming
+  icon: fas fa-theater-masks
   show: false
 
 - role: Drama Editor
@@ -157,6 +171,9 @@
 
 - role: Technical Manager
   icon: fas fa-wrench
+  aliases: 
+    - Head of Technology and Digital
+    - Head of Technology
   show: false
 
 - role: Head of IT
@@ -175,7 +192,16 @@
   icon: fas fa-chart-line
   aliases:
     - Brand Manager
+    - Head of Social Media
   show: false
+
+- role: Head of Graphics
+  icon: fas
+  show: false
+
+- role: Social Secretary 
+  icon: fas
+  show: false 
 
 - role: Head of Welfare
   icon: fas fa-heart

@@ -20,6 +20,8 @@ Huge thanks goes to The Nottingham New Theatre and there own [history project](h
 
 See the [contributing](/contributing/) section for details on how to help out.
 
+Are you named on this page and want to be removed? No problem - send us an email at <history@urn1350.co.uk> and any identifying information will be removed.
+
 <div class="grid-row">
 
 <div class="grid-8" markdown="1">

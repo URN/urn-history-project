@@ -1,4 +1,16 @@
 ---
+- name: Phoebe Fannon
+  role: Project Maintainer
+  bio: phoebe_fannon
+
+- name: Emily Culf
+  role: Project Maintainer
+  bio: emily_culf
+
+- name: Joe Banks
+  role: Project Maintainer
+  bio: joe_banks
+
 - name: Johnathan Graydon
-  role: Project Lead
+  role: Project Founder
   bio: johnathan_graydon

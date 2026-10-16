@@ -4,7 +4,7 @@ email: history@urn1350.co.uk
 twitter: urnalumni
 description: "Archive project collecting past shows, committees and alumni biographies to piece together the station's dynamic and vibrant history."
 url: "https://history.urn1350.co.uk" # the base hostname & protocol for your site
-ntbot_endpoint: "https://urn-history-intake.university-radio-nottingham-a08.workers.dev" # This used to be an AWS function, has now moved to a custom domain cloudflare worker
+ntbot_endpoint: "https://historysubmissions.urn1350.co.uk" # This used to be an AWS function, has now moved to a custom domain cloudflare worker
 turnstile_site_key: "0x4AAAAAAFY0Y2X87ftvXycL" # Turnstile site key, for the worker abov
 
 # How many shows is too few for a year

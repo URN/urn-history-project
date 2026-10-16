@@ -8,6 +8,11 @@ header_icon: ion-ios-person
 permalink: /collect/person/
 ---
 
+<div class="box-warning" role="alert">
+  <h2>Privacy notice</h2>
+  <p>This submission will be posted to our public <a href="https://github.com/URN/urn-history-project/issues">GitHub submissions board</a>, which anyone may be able to view. Do not include personal, contact, or other information that you do not want revealed publicly.</p>
+</div>
+
 <section class="collect-form" role="form">
   <form name="collect-person-form" id="collect-person-form" action="{{ site.ntbot_endpoint }}" method="POST">
 
@@ -124,23 +129,6 @@ Head of Daytime Programing - 2001-2002"></textarea>
       </div>
       <div class="collect-field">
         <textarea class="collect-textarea" name="links" placeholder="Twitter, @JoeBloggs."></textarea>
-      </div>
-    </div>
-
-    <div class="collect-row">
-      <div class="collect-label">
-        <h3>Contact preferences</h3>
-        <p>We would like to allow current students and recent graduates to get in contact with alumni in the industry. Your details will not be made public.</p>
-      </div>
-      <div class="collect-field">
-        <ul class="collect-checkboxes">
-          <li class="collect-checkboxes-full-width">
-            <label class="child-checked">
-              <input type="checkbox" name="contact_allowed" checked />
-              I'm happy to be contacted by current students and recent graduates via the Alumni Network
-            </label>
-          </li>
-        </ul>
       </div>
     </div>
 

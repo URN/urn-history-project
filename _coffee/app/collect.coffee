@@ -118,10 +118,6 @@ published: true
       mm = '0' + mm
     today = yyyy + '-' + mm + '-' + dd
 
-    form_data_computed =
-      'contact_allowed_yn': if form_dict['contact_allowed'] == 'on' then 'Yes' else 'No'
-      'contact_allowed_tf': if form_dict['contact_allowed'] == 'on' then 'true' else 'false'
-
     career_choices = []
     career_choices_formatted = ""
     career_choices_yaml = ""
@@ -168,10 +164,6 @@ Other careers | #{form_dict['career-other']}
 
 #{form_dict['awards']}
 
-## Contact Preferences
-
-Are we allowed to facilitate contact to this alumnus? **#{form_data_computed['contact_allowed_yn']}**
-
 ## Attempted File Generation
 
 ```
@@ -180,7 +172,6 @@ title: #{form_dict['name']}
 course:
   - #{form_dict['course']}
 graduated: #{form_dict['graduation']}
-contact_allowed: #{form_data_computed['contact_allowed_tf']}
 careers:
 #{career_choices_yaml}
 #{form_dict['career-other']}

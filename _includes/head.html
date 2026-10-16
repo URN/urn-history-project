@@ -41,6 +41,15 @@
   <script defer type="text/javascript" src="/js/focus-ring.js"></script>
   <script defer type="text/javascript" src="{% static /js/app.js %}" data-turbolinks-track="reload"></script>
 
+  {% if site.turnstile_site_key %}
+  <script>
+    window.onTurnstileLoad = function () {
+      document.dispatchEvent(new Event('turnstile:ready'));
+    };
+  </script>
+  <script async defer src="https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit&onload=onTurnstileLoad"></script>
+  {% endif %}
+
   {% for head_extra_line in layout.head_extra %}
     {{ head_extra_line }}
   {% endfor %}

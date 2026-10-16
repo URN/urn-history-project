@@ -86,6 +86,7 @@ published: true
       title: form_dict['title']
       message: message,
       name: ''
+      turnstile_token: form_dict['cf-turnstile-response']
       page_url: '/collect/show/'
       url: $(this).attr 'action'
 
@@ -203,6 +204,7 @@ submitted: #{today}
       title: form_dict['name'] + " bio submission"
       message: message,
       name: ''
+      turnstile_token: form_dict['cf-turnstile-response']
       page_url: '/collect/person/'
       url: $(this).attr 'action'
 

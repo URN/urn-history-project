@@ -40,6 +40,7 @@
           <textarea class="report-textarea" id="report-message" required placeholder="Message"></textarea>
           <input class="report-text" type="text" id="report-name" required placeholder="Your name and year of graduation" />
           <input type="hidden" id="report-page_url" value="{{ page.url }}"/>
+          {% include turnstile.html %}
           <button class="report-submit" type="submit">Submit</button>
         </form>
       </div>

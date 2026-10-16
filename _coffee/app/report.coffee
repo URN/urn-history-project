@@ -4,6 +4,7 @@ class ReportModel
     @page_url = opts.page_url
     @message = opts.message
     @name = opts.name
+    @turnstile_token = opts.turnstile_token
     @url = opts.url
 
   buildJSON: =>
@@ -12,6 +13,7 @@ class ReportModel
       page_url: @page_url
       message: @message
       name: @name
+      turnstile_token: @turnstile_token
 
   save: (opts) ->
     FORM_URL = @url
@@ -29,7 +31,7 @@ class ReportModel
           opts.error()
       error: (jqXHR, textStatus, errorThrown) ->
         alert('Oops, something went wrong')
-        error()
+        opts.error()
 
 disableReportForm = ->
   $('.report-submit').attr("disabled", true)
@@ -45,6 +47,21 @@ enableReportForm = ->
 reportThanks = (url) ->
   template = _.template $('#report-success-template').html()
   $('#report-modal-content').html template('url': url)
+
+renderTurnstileWidgets = ->
+  return unless window.turnstile?
+  $('.cf-turnstile:not([data-turnstile-widget-id])').each ->
+    widget_id = window.turnstile.render this,
+      sitekey: $(this).attr 'data-sitekey'
+    $(this).attr 'data-turnstile-widget-id', widget_id
+
+document.addEventListener 'turbolinks:load', renderTurnstileWidgets
+document.addEventListener 'turnstile:ready', renderTurnstileWidgets
+document.addEventListener 'turbolinks:before-cache', ->
+  return unless window.turnstile?
+  $('.cf-turnstile[data-turnstile-widget-id]').each ->
+    window.turnstile.remove $(this).attr 'data-turnstile-widget-id'
+    $(this).removeAttr 'data-turnstile-widget-id'
 
 frozenScrollTop = null
 
@@ -94,6 +111,7 @@ document.addEventListener 'turbolinks:load', ->
       page_url: $("#report-page_url", this).val()
       message: $("#report-message", this).val()
       name: $("#report-name", this).val()
+      turnstile_token: $("[name='cf-turnstile-response']", this).val()
       url: $(this).attr 'action'
 
     report.save

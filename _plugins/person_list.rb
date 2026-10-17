@@ -58,8 +58,10 @@ def parse_person_list(pl, people_by_filename)
 end
 
 def make_hp_path(title)
-  # Downcase, remove specials, space->underscore
-  title.downcase.gsub(/[^0-9a-z \-]/i, '').gsub(' ','_')
+  title.unicode_normalize(:nfc)
+       .downcase
+       .gsub(/[^\p{L}\p{N} -]/u, '')
+       .gsub(' ', '_')
 end
 
 module Jekyll

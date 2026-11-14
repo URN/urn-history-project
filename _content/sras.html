@@ -14,7 +14,8 @@ current: sras
 <div class="wrapper">
     <hr style="margin-bottom: 10px">
     <div class="container">
-        {% for sra in site.sras reversed %}
+        {% assign sras_by_year = site.sras | sort: 'year' | reverse %}
+        {% for sra in sras_by_year %}
             <div class="row" style="margin: 0">
                 <div class="people-grid col-md-2" style="align-self: center;">
                     <div class="title">
